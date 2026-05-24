@@ -1,12 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-children.jpg";
-import elderlyImg from "@/assets/program-elderly.jpg";
-import foodImg from "@/assets/program-food.jpg";
-import eduImg from "@/assets/program-education.jpg";
+import heroImg from "@/assets/seruds/orphan-group.jpg";
+import elderlyImg from "@/assets/seruds/old-age.jpg";
+import orphanImg from "@/assets/seruds/orphan-600.jpg";
+import eduImg from "@/assets/seruds/sponsor-child.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonationWidget } from "@/components/DonationWidget";
-import { BeneficiaryCard } from "@/components/BeneficiaryCard";
+import { BeneficiarySlider } from "@/components/BeneficiarySlider";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -93,9 +93,9 @@ function ImpactStats() {
 
 function Programs() {
   const programs = [
-    { title: "Orphanage & Joy Home", img: eduImg, desc: "Safe shelter, nutrition, and education for abandoned children in our Joy Home.", price: "From $30/mo" },
-    { title: "Sponsor Child Education", img: foodImg, desc: "Books, uniforms, fees, and mentoring — for just $360/year, give a child a future.", price: "$360/year" },
-    { title: "Happy Old Age Home", img: elderlyImg, desc: "Care, meals, and dignity for destitute elderly women in their golden years.", price: "From $36/mo" },
+    { title: "Orphanage & Joy Home", img: orphanImg, desc: "Safe shelter, nutrition, and education for abandoned children in our Joy Home.", price: "From $30/mo", to: "/orphanage" as const },
+    { title: "Sponsor Child Education", img: eduImg, desc: "Books, uniforms, fees, and mentoring — for just $360/year, give a child a future.", price: "$360/year", to: "/sponsor-education" as const },
+    { title: "Happy Old Age Home", img: elderlyImg, desc: "Care, meals, and dignity for destitute elderly women in their golden years.", price: "From $36/mo", to: "/old-age-home" as const },
   ];
   return (
     <section id="programs" className="py-20">
@@ -111,15 +111,15 @@ function Programs() {
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {programs.map((p) => (
-            <article key={p.title} className="group overflow-hidden rounded-2xl bg-card shadow-md ring-1 ring-border transition hover:-translate-y-1 hover:shadow-xl">
+            <article key={p.title} className="group flex flex-col overflow-hidden rounded-2xl bg-card shadow-md ring-1 ring-border transition hover:-translate-y-1 hover:shadow-xl">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src={p.img} alt={p.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" width={1200} height={900} />
               </div>
-              <div className="p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <div className="text-xs font-semibold uppercase tracking-widest text-gold-deep">{p.price}</div>
                 <h3 className="mt-1 font-display text-2xl font-semibold text-forest-deep">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
-                <Link to="/donate" className="mt-4 inline-flex items-center text-sm font-semibold text-forest hover:text-gold-deep">
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
+                <Link to={p.to} className="mt-4 inline-flex items-center self-start text-sm font-semibold text-forest hover:text-gold-deep">
                   Support this program →
                 </Link>
               </div>
@@ -140,8 +140,11 @@ function Beneficiary() {
           <h2 className="mt-2 font-display text-4xl font-semibold text-forest-deep md:text-5xl">
             Every donation has a name.
           </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Four children. Four lives changed because of donors like you.
+          </p>
         </div>
-        <BeneficiaryCard />
+        <BeneficiarySlider />
       </div>
     </section>
   );
