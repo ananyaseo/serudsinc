@@ -14,6 +14,7 @@ import { Route as OrphanageRouteImport } from './routes/orphanage'
 import { Route as OldAgeHomeRouteImport } from './routes/old-age-home'
 import { Route as DonateRouteImport } from './routes/donate'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BeneficiariesIdRouteImport } from './routes/beneficiaries.$id'
 
 const SponsorEducationRoute = SponsorEducationRouteImport.update({
   id: '/sponsor-education',
@@ -40,6 +41,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BeneficiariesIdRoute = BeneficiariesIdRouteImport.update({
+  id: '/beneficiaries/$id',
+  path: '/beneficiaries/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/beneficiaries/$id': typeof BeneficiariesIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/beneficiaries/$id': typeof BeneficiariesIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,6 +70,7 @@ export interface FileRoutesById {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/beneficiaries/$id': typeof BeneficiariesIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -71,8 +80,15 @@ export interface FileRouteTypes {
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/beneficiaries/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/donate' | '/old-age-home' | '/orphanage' | '/sponsor-education'
+  to:
+    | '/'
+    | '/donate'
+    | '/old-age-home'
+    | '/orphanage'
+    | '/sponsor-education'
+    | '/beneficiaries/$id'
   id:
     | '__root__'
     | '/'
@@ -80,6 +96,7 @@ export interface FileRouteTypes {
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/beneficiaries/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -88,6 +105,7 @@ export interface RootRouteChildren {
   OldAgeHomeRoute: typeof OldAgeHomeRoute
   OrphanageRoute: typeof OrphanageRoute
   SponsorEducationRoute: typeof SponsorEducationRoute
+  BeneficiariesIdRoute: typeof BeneficiariesIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -127,6 +145,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/beneficiaries/$id': {
+      id: '/beneficiaries/$id'
+      path: '/beneficiaries/$id'
+      fullPath: '/beneficiaries/$id'
+      preLoaderRoute: typeof BeneficiariesIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -136,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   OldAgeHomeRoute: OldAgeHomeRoute,
   OrphanageRoute: OrphanageRoute,
   SponsorEducationRoute: SponsorEducationRoute,
+  BeneficiariesIdRoute: BeneficiariesIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
