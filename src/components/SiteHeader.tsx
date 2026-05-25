@@ -6,7 +6,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="SERUDS India logo" className="h-10 w-auto" width={140} height={40} />
+          <img src={logo} alt="SERUDS Inc logo" className="h-12 w-12 object-contain" width={48} height={48} />
           <div className="hidden leading-tight sm:block">
             <div className="font-display text-base font-semibold text-forest-deep">SERUDS Inc</div>
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground">501(c)(3) Charity</div>
@@ -18,6 +18,7 @@ export function SiteHeader() {
           <Link to="/sponsor-education" className="hover:text-gold-deep">Education</Link>
           <Link to="/old-age-home" className="hover:text-gold-deep">Old Age Home</Link>
           <a href="/#story" className="hover:text-gold-deep">Stories</a>
+          <Link to="/contact" className="hover:text-gold-deep">Contact</Link>
         </nav>
         <Link
           to="/donate"
