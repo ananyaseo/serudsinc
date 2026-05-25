@@ -18,6 +18,7 @@ export function SiteHeader() {
           <Link to="/sponsor-education" className="hover:text-gold-deep">Education</Link>
           <Link to="/old-age-home" className="hover:text-gold-deep">Old Age Home</Link>
           <a href="/#story" className="hover:text-gold-deep">Stories</a>
+          <Link to="/contact" className="hover:text-gold-deep">Contact</Link>
         </nav>
         <Link
           to="/donate"
