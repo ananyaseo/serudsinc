@@ -83,7 +83,7 @@ function BeneficiaryPage() {
             <h2 className="font-display text-3xl font-semibold text-forest-deep">
               {b.name.split(" ").slice(-1)[0]}'s Story
             </h2>
-            {b.story.map((p, i) => (
+            {b.story.map((p: string, i: number) => (
               <p key={i}>{p}</p>
             ))}
             <blockquote className="border-l-4 border-gold bg-gold/10 p-4 font-display text-xl italic text-forest-deep">
