@@ -70,8 +70,10 @@ export const Route = createFileRoute("/api/chat")({
           return new Response("Question must be 1-1000 chars", { status: 400 });
 
         // Session
-        let sessionId = body.sessionId ?? null;
-        if (!sessionId) {
+        let sessionId: string;
+        if (body.sessionId) {
+          sessionId = body.sessionId;
+        } else {
           const { data, error } = await supabaseAdmin
             .from("chat_sessions")
             .insert({})
