@@ -98,7 +98,7 @@ export const Route = createFileRoute("/api/chat")({
           const { data, error } = await supabaseAdmin.rpc("match_knowledge_chunks", {
             query_embedding: qEmbedding as unknown as string,
             match_count: 6,
-            filter_org: filterOrg,
+            filter_org: filterOrg ?? undefined,
           });
           if (error) console.error("match_knowledge_chunks error", error);
           chunks = (data ?? []) as ChunkRow[];
