@@ -14,13 +14,155 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      chat_messages: {
+        Row: {
+          content: string
+          created_at: string
+          id: string
+          role: string
+          session_id: string
+          sources: Json | null
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          id?: string
+          role: string
+          session_id: string
+          sources?: Json | null
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          id?: string
+          role?: string
+          session_id?: string
+          sources?: Json | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "chat_messages_session_id_fkey"
+            columns: ["session_id"]
+            isOneToOne: false
+            referencedRelation: "chat_sessions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      chat_sessions: {
+        Row: {
+          created_at: string
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      knowledge_chunks: {
+        Row: {
+          content: string
+          created_at: string
+          embedding: string | null
+          id: string
+          image_url: string | null
+          org: string
+          source_title: string
+          source_url: string | null
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          embedding?: string | null
+          id?: string
+          image_url?: string | null
+          org?: string
+          source_title: string
+          source_url?: string | null
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          embedding?: string | null
+          id?: string
+          image_url?: string | null
+          org?: string
+          source_title?: string
+          source_url?: string | null
+        }
+        Relationships: []
+      }
+      user_feedback: {
+        Row: {
+          answer: string | null
+          created_at: string
+          id: string
+          message_id: string | null
+          question: string | null
+          rating: number
+          session_id: string | null
+        }
+        Insert: {
+          answer?: string | null
+          created_at?: string
+          id?: string
+          message_id?: string | null
+          question?: string | null
+          rating: number
+          session_id?: string | null
+        }
+        Update: {
+          answer?: string | null
+          created_at?: string
+          id?: string
+          message_id?: string | null
+          question?: string | null
+          rating?: number
+          session_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_feedback_message_id_fkey"
+            columns: ["message_id"]
+            isOneToOne: false
+            referencedRelation: "chat_messages"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "user_feedback_session_id_fkey"
+            columns: ["session_id"]
+            isOneToOne: false
+            referencedRelation: "chat_sessions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      match_knowledge_chunks: {
+        Args: {
+          filter_org?: string
+          match_count?: number
+          query_embedding: string
+        }
+        Returns: {
+          content: string
+          id: string
+          image_url: string
+          org: string
+          similarity: number
+          source_title: string
+          source_url: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
