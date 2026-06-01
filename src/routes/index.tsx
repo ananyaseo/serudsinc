@@ -7,6 +7,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonationWidget } from "@/components/DonationWidget";
 import { BeneficiarySlider } from "@/components/BeneficiarySlider";
+import { AiAssistantWidget } from "@/components/AiAssistantWidget";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,6 +31,7 @@ function Home() {
       <Beneficiary />
       <CTA />
       <SiteFooter />
+      <AiAssistantWidget />
     </div>
   );
 }
