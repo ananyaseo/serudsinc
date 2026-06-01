@@ -16,6 +16,8 @@ import { Route as DonateRouteImport } from './routes/donate'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BeneficiariesIdRouteImport } from './routes/beneficiaries.$id'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as ApiPublicSeedKnowledgeRouteImport } from './routes/api/public/seed-knowledge'
 
 const SponsorEducationRoute = SponsorEducationRouteImport.update({
   id: '/sponsor-education',
@@ -52,6 +54,16 @@ const BeneficiariesIdRoute = BeneficiariesIdRouteImport.update({
   path: '/beneficiaries/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicSeedKnowledgeRoute = ApiPublicSeedKnowledgeRouteImport.update({
+  id: '/api/public/seed-knowledge',
+  path: '/api/public/seed-knowledge',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -60,7 +72,9 @@ export interface FileRoutesByFullPath {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
+  '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -69,7 +83,9 @@ export interface FileRoutesByTo {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
+  '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -79,7 +95,9 @@ export interface FileRoutesById {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
+  '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -90,7 +108,9 @@ export interface FileRouteTypes {
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/api/chat'
     | '/beneficiaries/$id'
+    | '/api/public/seed-knowledge'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -99,7 +119,9 @@ export interface FileRouteTypes {
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/api/chat'
     | '/beneficiaries/$id'
+    | '/api/public/seed-knowledge'
   id:
     | '__root__'
     | '/'
@@ -108,7 +130,9 @@ export interface FileRouteTypes {
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/api/chat'
     | '/beneficiaries/$id'
+    | '/api/public/seed-knowledge'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -118,7 +142,9 @@ export interface RootRouteChildren {
   OldAgeHomeRoute: typeof OldAgeHomeRoute
   OrphanageRoute: typeof OrphanageRoute
   SponsorEducationRoute: typeof SponsorEducationRoute
+  ApiChatRoute: typeof ApiChatRoute
   BeneficiariesIdRoute: typeof BeneficiariesIdRoute
+  ApiPublicSeedKnowledgeRoute: typeof ApiPublicSeedKnowledgeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -172,6 +198,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BeneficiariesIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/seed-knowledge': {
+      id: '/api/public/seed-knowledge'
+      path: '/api/public/seed-knowledge'
+      fullPath: '/api/public/seed-knowledge'
+      preLoaderRoute: typeof ApiPublicSeedKnowledgeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -182,8 +222,20 @@ const rootRouteChildren: RootRouteChildren = {
   OldAgeHomeRoute: OldAgeHomeRoute,
   OrphanageRoute: OrphanageRoute,
   SponsorEducationRoute: SponsorEducationRoute,
+  ApiChatRoute: ApiChatRoute,
   BeneficiariesIdRoute: BeneficiariesIdRoute,
+  ApiPublicSeedKnowledgeRoute: ApiPublicSeedKnowledgeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
