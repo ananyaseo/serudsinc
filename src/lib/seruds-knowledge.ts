@@ -125,4 +125,61 @@ export const SERUDS_KNOWLEDGE: SeedEntry[] = [
     content:
       "SERUDS' ongoing impact: more than 1,200 orphan and destitute children housed, fed and educated; more than 350 elderly women cared for in the Happy Old Age Home; more than 5,000 meals served every month across programs; and 100% of US donations to SERUDS Inc. forwarded to India for program work.",
   },
+  {
+    org: "both",
+    source_title: "When SERUDS was founded",
+    source_url: "https://serudsindia.org/about-us/",
+    content:
+      "SERUDS (Sai Educational Rural and Urban Development Society) was founded and registered in the year 2003 in Kurnool, Andhra Pradesh, India, under the Andhra Pradesh Public Societies Registration Act, XXXV of 2001 (Registration No. 264 of 2003, dated 21st April 2003). The organisation was founded by Mr. G. Mallikarjuna, a Bachelor of Engineering graduate from Vasavi College of Engineering, Hyderabad, who started social work at the age of 24. He continues to serve as President of SERUDS. SERUDS Inc., the US 501(c)(3) sister charity, was later established in Florida to support SERUDS India's programs.",
+  },
+  {
+    org: "india",
+    source_title: "SERUDS India — Legal Status & Registrations",
+    source_url: "https://serudsindia.org/about-us/our-legal-status/",
+    content:
+      "Legal status of SERUDS India: Registered as a Society under the Andhra Pradesh Public Societies Registration Act, XXXV of 2001 (Reg. No. 264 of 2003, dated 21 April 2003). Registered under Section 12AA of the Income Tax Act, 1961 (F.No. DIT(E)/HYD/12A & 80G/47(11)/06-07, dated 01-03-2007). Registered under Section 80G(5)(vi) of the Income Tax Act, 1961 (F.No. DIT(E)/HYD/80G/1(08)/10-11, dated 20-01-2011, valid from 01-04-2010). Registered under Section 6(1)(a) of the Foreign Contribution (Regulation) Act (FCRA Reg. No. 010270206), valid till 31-03-2027. PAN: AAFTS8988J. NGO Darpan Unique ID: AP/2009/0014271. Listed/verified with GuideStar India, HelpyourNGO, Give2Asia, GiveIndia, GlobalGiving Foundation, LetzChange, Godparents, Icharity and others. Auditor: Mr. K. Raghuveer Singh, Chartered Accountant, Kurnool.",
+  },
+  {
+    org: "india",
+    source_title: "Contact SERUDS India (Kurnool office)",
+    source_url: "https://serudsindia.org/contact/",
+    content:
+      "SERUDS India head office: Sai Educational Rural and Urban Development Society (SERUDS), D.No. 46-740, Budhavarapeta, Beside Canara Bank, Kurnool – 518 002, Andhra Pradesh, India. Mobile: +91 9849977577. Phone: +91 (8518) 255626. Email: info@serudsindia.org. Visitors are welcome at the orphanage and day care centres. SERUDS is within easy driving distance of Hyderabad (205 km), Vijayawada (330 km) and Bengaluru (345 km), and many donors visit and spend time with the children.",
+  },
+  {
+    org: "usa",
+    source_title: "Contact SERUDS Inc. (USA office)",
+    source_url: "https://serudsinc.org/contact-us/",
+    content:
+      "How to contact SERUDS Inc. (the US 501(c)(3) charity): Address — 5126 Ballantrae Blvd., Land O' Lakes, Florida 34638, USA. Phone: +1 813 946 0254 (also reachable at +1 347 717 4569). Email: seruds.inc@gmail.com. You can also use the contact form on serudsinc.org/contact-us. SERUDS Inc. responds to sponsorship, partnership, CSR and volunteering enquiries from US donors and forwards 100% of donations to program work in India.",
+  },
+  {
+    org: "india",
+    source_title: "Women Empowerment & Development Programs",
+    source_url: "https://serudsindia.org/women-development-programs-in-andhrapradesh/",
+    content:
+      "SERUDS India runs women empowerment and development programs in and around Kurnool, Andhra Pradesh. Activities include vocational training (tailoring, handicrafts, computer skills), self-help group (SHG) formation, micro-credit linkages, health and hygiene awareness, legal-rights education, and support for women from Scheduled Caste, Scheduled Tribe and economically backward communities. The goal is to help destitute, widowed and abandoned women earn a sustainable livelihood and live with dignity.",
+  },
+  {
+    org: "india",
+    source_title: "Donate Food for Poor Elders",
+    source_url: "https://serudsindia.org/elders/donate-food-for-poor-elder/",
+    content:
+      "Through the 'Donate Food for Poor Elders' program, donors can sponsor nutritious meals for destitute elderly women living at the Happy Old Age Home in Kurnool. A donation of about ₹2,000 (roughly USD 25) feeds one elderly woman for a month; larger gifts cover annual food costs or birthday/anniversary meals for all residents. Donors can dedicate a day of meals in memory of a loved one.",
+  },
+  {
+    org: "india",
+    source_title: "Sponsor a Poor Elder",
+    source_url: "https://serudsindia.org/elders/sponsor-poor-elder/",
+    content:
+      "The 'Sponsor a Poor Elder' program lets donors fully support one destitute elderly woman at the Happy Old Age Home, covering food, shelter, clothing, medicines, eye care and basic medical attention. Sponsorship is approximately ₹2,500 per month (about USD 30-36/month, or ₹30,000 per year). Donors receive periodic updates about the elder they sponsor.",
+  },
+  {
+    org: "both",
+    source_title: "Ways to Contribute / Donate to SERUDS",
+    source_url: "https://serudsindia.org/contribute-donation-for-charity/",
+    content:
+      "Ways to support SERUDS: one-time or monthly online donations through serudsindia.org (India, 80G receipt) or serudsinc.org (USA, 501(c)(3) tax receipt); sponsor a child, a girl child, or an elder; donate food, books, clothes or medicines; fund a specific project such as a healthcare camp or vocational training batch; partner via Corporate Social Responsibility (CSR); leave a legacy gift; or volunteer your time and skills. Indian donors can pay by UPI, card, net banking or NEFT; US donors by card or PayPal; checks accepted at the SERUDS Inc. Florida address.",
+  },
 ];
+
