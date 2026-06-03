@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SponsorEducationRouteImport } from './routes/sponsor-education'
 import { Route as OrphanageRouteImport } from './routes/orphanage'
 import { Route as OldAgeHomeRouteImport } from './routes/old-age-home'
+import { Route as GroceriesRouteImport } from './routes/groceries'
 import { Route as DonateRouteImport } from './routes/donate'
 import { Route as CrecheRouteImport } from './routes/creche'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -33,6 +34,11 @@ const OrphanageRoute = OrphanageRouteImport.update({
 const OldAgeHomeRoute = OldAgeHomeRouteImport.update({
   id: '/old-age-home',
   path: '/old-age-home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GroceriesRoute = GroceriesRouteImport.update({
+  id: '/groceries',
+  path: '/groceries',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DonateRoute = DonateRouteImport.update({
@@ -76,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
@@ -88,6 +95,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
@@ -101,6 +109,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
@@ -115,6 +124,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/groceries'
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/groceries'
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
@@ -139,6 +150,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/groceries'
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
@@ -152,6 +164,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CrecheRoute: typeof CrecheRoute
   DonateRoute: typeof DonateRoute
+  GroceriesRoute: typeof GroceriesRoute
   OldAgeHomeRoute: typeof OldAgeHomeRoute
   OrphanageRoute: typeof OrphanageRoute
   SponsorEducationRoute: typeof SponsorEducationRoute
@@ -181,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/old-age-home'
       fullPath: '/old-age-home'
       preLoaderRoute: typeof OldAgeHomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/groceries': {
+      id: '/groceries'
+      path: '/groceries'
+      fullPath: '/groceries'
+      preLoaderRoute: typeof GroceriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/donate': {
@@ -240,6 +260,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CrecheRoute: CrecheRoute,
   DonateRoute: DonateRoute,
+  GroceriesRoute: GroceriesRoute,
   OldAgeHomeRoute: OldAgeHomeRoute,
   OrphanageRoute: OrphanageRoute,
   SponsorEducationRoute: SponsorEducationRoute,
