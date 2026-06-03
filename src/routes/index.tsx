@@ -29,6 +29,7 @@ function Home() {
       <Hero />
       <ImpactStats />
       <Programs />
+      <AboutSeruds />
       <Beneficiary />
       <CTA />
       <SiteFooter />
