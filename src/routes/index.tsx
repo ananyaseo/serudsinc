@@ -3,6 +3,7 @@ import heroImg from "@/assets/seruds/orphan-group.jpg";
 import elderlyImg from "@/assets/seruds/old-age.jpg";
 import orphanImg from "@/assets/seruds/orphan-600.jpg";
 import eduImg from "@/assets/seruds/sponsor-child.jpg";
+import logoImg from "@/assets/seruds/logo.png";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
@@ -28,6 +29,7 @@ function Home() {
       <Hero />
       <ImpactStats />
       <Programs />
+      <AboutSeruds />
       <Beneficiary />
       <CTA />
       <SiteFooter />
@@ -150,6 +152,38 @@ function Beneficiary() {
           </p>
         </div>
         <BeneficiarySlider />
+      </div>
+    </section>
+  );
+}
+
+function AboutSeruds() {
+  return (
+    <section id="about" className="bg-secondary py-20">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <div className="text-xs font-semibold uppercase tracking-widest text-gold-deep">About Seruds Inc</div>
+            <h2 className="mt-2 font-display text-4xl font-semibold text-forest-deep md:text-5xl">
+              Join us in creating ripples of change.
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-foreground/85">
+              Your donation, big or small, fuels our mission to bring hope, dignity, and transformation to those in need. Together, let's be the catalysts for change.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-foreground/85">
+              Donate to SERUDS INC today and become a part of something truly impactful. Thank you for making dreams come true!
+            </p>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              SERUDS Inc. is a 501(c)(3) Charitable Organization in Land O' Lakes, Florida. SERUDS projects are focused on disadvantaged children (orphanage, sponsoring education, street children), Elderly & Homeless (Old Age Home, sponsoring cooked meals and groceries), and Women Empowerment (livelihood training) in Kurnool, India.
+            </p>
+            <Link to="/donate" className="mt-8 inline-flex rounded-full bg-gold px-8 py-4 text-base font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground">
+              Donate Today →
+            </Link>
+          </div>
+          <div className="flex items-center justify-center">
+            <img src={logoImg} alt="SERUDS Inc logo" className="max-h-72 w-auto opacity-90" />
+          </div>
+        </div>
       </div>
     </section>
   );
