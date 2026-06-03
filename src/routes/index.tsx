@@ -3,6 +3,7 @@ import heroImg from "@/assets/seruds/orphan-group.jpg";
 import elderlyImg from "@/assets/seruds/old-age.jpg";
 import orphanImg from "@/assets/seruds/orphan-600.jpg";
 import eduImg from "@/assets/seruds/sponsor-child.jpg";
+import logoImg from "@/assets/seruds/logo.png";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
