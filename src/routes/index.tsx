@@ -98,6 +98,9 @@ function Programs() {
     { title: "Orphanage & Joy Home", img: orphanImg, desc: "Safe shelter, nutrition, and education for abandoned children in our Joy Home.", price: "From $30/mo", to: "/orphanage" as const },
     { title: "Sponsor Child Education", img: eduImg, desc: "Books, uniforms, fees, and mentoring — for just $360/year, give a child a future.", price: "$360/year", to: "/sponsor-education" as const },
     { title: "Happy Old Age Home", img: elderlyImg, desc: "Care, meals, and dignity for destitute elderly women in their golden years.", price: "From $36/mo", to: "/old-age-home" as const },
+    { title: "Creche Program", img: eduImg, desc: "Safe daycare for children of daily-wage workers — meals, learning and care from morning till evening.", price: "Sponsor a child", to: "/creche" as const },
+    { title: "Monthly Groceries for Elders", img: elderlyImg, desc: "Sponsor a destitute elderly woman with a full month of groceries delivered to her door.", price: "$36/month", to: "/groceries" as const },
+    { title: "Women Empowerment", img: orphanImg, desc: "Sponsor a sewing machine and tailoring & embroidery training for a rural woman.", price: "$100 one-time", to: "/women-empowerment" as const },
   ];
   return (
     <section id="programs" className="py-20">
