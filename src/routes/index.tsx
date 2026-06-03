@@ -5,7 +5,7 @@ import orphanImg from "@/assets/seruds/orphan-600.jpg";
 import eduImg from "@/assets/seruds/sponsor-child.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { DonationWidget } from "@/components/DonationWidget";
+import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import { BeneficiarySlider } from "@/components/BeneficiarySlider";
 import { AiAssistantWidget } from "@/components/AiAssistantWidget";
 
