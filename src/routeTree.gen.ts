@@ -9,16 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WomenEmpowermentRouteImport } from './routes/women-empowerment'
 import { Route as SponsorEducationRouteImport } from './routes/sponsor-education'
 import { Route as OrphanageRouteImport } from './routes/orphanage'
 import { Route as OldAgeHomeRouteImport } from './routes/old-age-home'
+import { Route as GroceriesRouteImport } from './routes/groceries'
 import { Route as DonateRouteImport } from './routes/donate'
+import { Route as CrecheRouteImport } from './routes/creche'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BeneficiariesIdRouteImport } from './routes/beneficiaries.$id'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as ApiPublicSeedKnowledgeRouteImport } from './routes/api/public/seed-knowledge'
 
+const WomenEmpowermentRoute = WomenEmpowermentRouteImport.update({
+  id: '/women-empowerment',
+  path: '/women-empowerment',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SponsorEducationRoute = SponsorEducationRouteImport.update({
   id: '/sponsor-education',
   path: '/sponsor-education',
@@ -34,9 +42,19 @@ const OldAgeHomeRoute = OldAgeHomeRouteImport.update({
   path: '/old-age-home',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GroceriesRoute = GroceriesRouteImport.update({
+  id: '/groceries',
+  path: '/groceries',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DonateRoute = DonateRouteImport.update({
   id: '/donate',
   path: '/donate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrecheRoute = CrecheRouteImport.update({
+  id: '/creche',
+  path: '/creche',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -68,10 +86,13 @@ const ApiPublicSeedKnowledgeRoute = ApiPublicSeedKnowledgeRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/women-empowerment': typeof WomenEmpowermentRoute
   '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
   '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
@@ -79,10 +100,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/women-empowerment': typeof WomenEmpowermentRoute
   '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
   '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
@@ -91,10 +115,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/women-empowerment': typeof WomenEmpowermentRoute
   '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
   '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
@@ -104,10 +131,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contact'
+    | '/creche'
     | '/donate'
+    | '/groceries'
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/women-empowerment'
     | '/api/chat'
     | '/beneficiaries/$id'
     | '/api/public/seed-knowledge'
@@ -115,10 +145,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contact'
+    | '/creche'
     | '/donate'
+    | '/groceries'
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/women-empowerment'
     | '/api/chat'
     | '/beneficiaries/$id'
     | '/api/public/seed-knowledge'
@@ -126,10 +159,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contact'
+    | '/creche'
     | '/donate'
+    | '/groceries'
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/women-empowerment'
     | '/api/chat'
     | '/beneficiaries/$id'
     | '/api/public/seed-knowledge'
@@ -138,10 +174,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  CrecheRoute: typeof CrecheRoute
   DonateRoute: typeof DonateRoute
+  GroceriesRoute: typeof GroceriesRoute
   OldAgeHomeRoute: typeof OldAgeHomeRoute
   OrphanageRoute: typeof OrphanageRoute
   SponsorEducationRoute: typeof SponsorEducationRoute
+  WomenEmpowermentRoute: typeof WomenEmpowermentRoute
   ApiChatRoute: typeof ApiChatRoute
   BeneficiariesIdRoute: typeof BeneficiariesIdRoute
   ApiPublicSeedKnowledgeRoute: typeof ApiPublicSeedKnowledgeRoute
@@ -149,6 +188,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/women-empowerment': {
+      id: '/women-empowerment'
+      path: '/women-empowerment'
+      fullPath: '/women-empowerment'
+      preLoaderRoute: typeof WomenEmpowermentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sponsor-education': {
       id: '/sponsor-education'
       path: '/sponsor-education'
@@ -170,11 +216,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OldAgeHomeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/groceries': {
+      id: '/groceries'
+      path: '/groceries'
+      fullPath: '/groceries'
+      preLoaderRoute: typeof GroceriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/donate': {
       id: '/donate'
       path: '/donate'
       fullPath: '/donate'
       preLoaderRoute: typeof DonateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/creche': {
+      id: '/creche'
+      path: '/creche'
+      fullPath: '/creche'
+      preLoaderRoute: typeof CrecheRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -218,10 +278,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  CrecheRoute: CrecheRoute,
   DonateRoute: DonateRoute,
+  GroceriesRoute: GroceriesRoute,
   OldAgeHomeRoute: OldAgeHomeRoute,
   OrphanageRoute: OrphanageRoute,
   SponsorEducationRoute: SponsorEducationRoute,
+  WomenEmpowermentRoute: WomenEmpowermentRoute,
   ApiChatRoute: ApiChatRoute,
   BeneficiariesIdRoute: BeneficiariesIdRoute,
   ApiPublicSeedKnowledgeRoute: ApiPublicSeedKnowledgeRoute,

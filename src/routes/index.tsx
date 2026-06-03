@@ -5,7 +5,7 @@ import orphanImg from "@/assets/seruds/orphan-600.jpg";
 import eduImg from "@/assets/seruds/sponsor-child.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { DonationWidget } from "@/components/DonationWidget";
+import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import { BeneficiarySlider } from "@/components/BeneficiarySlider";
 import { AiAssistantWidget } from "@/components/AiAssistantWidget";
 
@@ -40,7 +40,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImg} alt="Children smiling in Kurnool, India" className="h-full w-full object-cover" width={1920} height={1080} />
+        <img src={heroImg} alt="Children smiling in Kurnool, India" className="h-full w-full object-cover opacity-80" width={1920} height={1080} />
         <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/85 via-forest-deep/60 to-forest-deep/20" />
       </div>
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-5 md:py-28 lg:py-36">
@@ -65,7 +65,7 @@ function Hero() {
           </div>
         </div>
         <div className="md:col-span-2">
-          <DonationWidget />
+          <DonorboxEmbed />
         </div>
       </div>
     </section>
@@ -98,6 +98,9 @@ function Programs() {
     { title: "Orphanage & Joy Home", img: orphanImg, desc: "Safe shelter, nutrition, and education for abandoned children in our Joy Home.", price: "From $30/mo", to: "/orphanage" as const },
     { title: "Sponsor Child Education", img: eduImg, desc: "Books, uniforms, fees, and mentoring — for just $360/year, give a child a future.", price: "$360/year", to: "/sponsor-education" as const },
     { title: "Happy Old Age Home", img: elderlyImg, desc: "Care, meals, and dignity for destitute elderly women in their golden years.", price: "From $36/mo", to: "/old-age-home" as const },
+    { title: "Creche Program", img: eduImg, desc: "Safe daycare for children of daily-wage workers — meals, learning and care from morning till evening.", price: "Sponsor a child", to: "/creche" as const },
+    { title: "Monthly Groceries for Elders", img: elderlyImg, desc: "Sponsor a destitute elderly woman with a full month of groceries delivered to her door.", price: "$36/month", to: "/groceries" as const },
+    { title: "Women Empowerment", img: orphanImg, desc: "Sponsor a sewing machine and tailoring & embroidery training for a rural woman.", price: "$100 one-time", to: "/women-empowerment" as const },
   ];
   return (
     <section id="programs" className="py-20">
