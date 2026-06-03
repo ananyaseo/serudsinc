@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WomenEmpowermentRouteImport } from './routes/women-empowerment'
 import { Route as SponsorEducationRouteImport } from './routes/sponsor-education'
 import { Route as OrphanageRouteImport } from './routes/orphanage'
 import { Route as OldAgeHomeRouteImport } from './routes/old-age-home'
@@ -21,6 +22,11 @@ import { Route as BeneficiariesIdRouteImport } from './routes/beneficiaries.$id'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as ApiPublicSeedKnowledgeRouteImport } from './routes/api/public/seed-knowledge'
 
+const WomenEmpowermentRoute = WomenEmpowermentRouteImport.update({
+  id: '/women-empowerment',
+  path: '/women-empowerment',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SponsorEducationRoute = SponsorEducationRouteImport.update({
   id: '/sponsor-education',
   path: '/sponsor-education',
@@ -86,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/women-empowerment': typeof WomenEmpowermentRoute
   '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
   '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
@@ -99,6 +106,7 @@ export interface FileRoutesByTo {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/women-empowerment': typeof WomenEmpowermentRoute
   '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
   '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
@@ -113,6 +121,7 @@ export interface FileRoutesById {
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
   '/sponsor-education': typeof SponsorEducationRoute
+  '/women-empowerment': typeof WomenEmpowermentRoute
   '/api/chat': typeof ApiChatRoute
   '/beneficiaries/$id': typeof BeneficiariesIdRoute
   '/api/public/seed-knowledge': typeof ApiPublicSeedKnowledgeRoute
@@ -128,6 +137,7 @@ export interface FileRouteTypes {
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/women-empowerment'
     | '/api/chat'
     | '/beneficiaries/$id'
     | '/api/public/seed-knowledge'
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/women-empowerment'
     | '/api/chat'
     | '/beneficiaries/$id'
     | '/api/public/seed-knowledge'
@@ -154,6 +165,7 @@ export interface FileRouteTypes {
     | '/old-age-home'
     | '/orphanage'
     | '/sponsor-education'
+    | '/women-empowerment'
     | '/api/chat'
     | '/beneficiaries/$id'
     | '/api/public/seed-knowledge'
@@ -168,6 +180,7 @@ export interface RootRouteChildren {
   OldAgeHomeRoute: typeof OldAgeHomeRoute
   OrphanageRoute: typeof OrphanageRoute
   SponsorEducationRoute: typeof SponsorEducationRoute
+  WomenEmpowermentRoute: typeof WomenEmpowermentRoute
   ApiChatRoute: typeof ApiChatRoute
   BeneficiariesIdRoute: typeof BeneficiariesIdRoute
   ApiPublicSeedKnowledgeRoute: typeof ApiPublicSeedKnowledgeRoute
@@ -175,6 +188,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/women-empowerment': {
+      id: '/women-empowerment'
+      path: '/women-empowerment'
+      fullPath: '/women-empowerment'
+      preLoaderRoute: typeof WomenEmpowermentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sponsor-education': {
       id: '/sponsor-education'
       path: '/sponsor-education'
@@ -264,6 +284,7 @@ const rootRouteChildren: RootRouteChildren = {
   OldAgeHomeRoute: OldAgeHomeRoute,
   OrphanageRoute: OrphanageRoute,
   SponsorEducationRoute: SponsorEducationRoute,
+  WomenEmpowermentRoute: WomenEmpowermentRoute,
   ApiChatRoute: ApiChatRoute,
   BeneficiariesIdRoute: BeneficiariesIdRoute,
   ApiPublicSeedKnowledgeRoute: ApiPublicSeedKnowledgeRoute,
