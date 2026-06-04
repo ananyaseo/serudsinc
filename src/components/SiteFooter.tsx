@@ -1,26 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
-
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      "dbox-widget": React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & {
-          campaign?: string;
-          type?: string;
-          "button-label"?: string;
-          "button-type"?: string;
-          "button-color"?: string;
-          "button-size"?: string;
-          "regular-position"?: string;
-          "show-icon"?: string;
-        },
-        HTMLElement
-      >;
-    }
-  }
-}
+import { Facebook, Twitter, Youtube, Linkedin, Instagram } from "lucide-react";
 
 export function SiteFooter() {
   useEffect(() => {
@@ -69,12 +49,12 @@ export function SiteFooter() {
         </div>
         <div>
           <div className="text-xs font-semibold uppercase tracking-widest text-gold">Follow us on</div>
-          <div className="mt-4 flex flex-wrap gap-3 text-sm text-primary-foreground/80">
-            <a href="https://www.facebook.com/serudsinc" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Facebook</a>
-            <a href="https://twitter.com/serudsinc" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Twitter</a>
-            <a href="https://www.youtube.com/@serudsinc" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Youtube</a>
-            <a href="https://www.linkedin.com/company/seruds-inc" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Linkedin</a>
-            <a href="https://www.instagram.com/serudsinc" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Instagram</a>
+          <div className="mt-4 flex flex-wrap gap-3 text-primary-foreground/80">
+            <a href="https://www.facebook.com/www.serudsindia.org/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="hover:text-gold"><Facebook size={20} /></a>
+            <a href="https://twitter.com/seruds" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-gold"><Twitter size={20} /></a>
+            <a href="https://www.youtube.com/channel/UCGjgSth-CNUhd0q6byjaILg" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-gold"><Youtube size={20} /></a>
+            <a href="https://www.linkedin.com/company/seruds" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-gold"><Linkedin size={20} /></a>
+            <a href="https://www.instagram.com/serudsindia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-gold"><Instagram size={20} /></a>
           </div>
           <div className="mt-6">
             {/* @ts-expect-error custom element */}
