@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
+import { Facebook, Twitter, Youtube, Linkedin, Instagram } from "lucide-react";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
