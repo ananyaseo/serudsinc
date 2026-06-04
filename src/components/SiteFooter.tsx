@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 export function SiteFooter() {
   return (
     <footer className="bg-forest-deep text-primary-foreground">
@@ -7,31 +9,35 @@ export function SiteFooter() {
           <span className="text-xs font-medium opacity-80">501(c)(3) Tax ID • EIN 84-3593881</span>
         </div>
       </div>
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="font-display text-2xl font-semibold">SERUDS Inc</div>
-          <p className="mt-3 max-w-md text-sm leading-relaxed text-primary-foreground/75">
-            A 501(c)(3) charitable organization based in Land O' Lakes, Florida, raising funds for orphan children, destitute elderly, and women in Kurnool, Andhra Pradesh.
-          </p>
-        </div>
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-2">
         <div>
-          <div className="text-xs font-semibold uppercase tracking-widest text-gold">Transparency</div>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li><a href="#" className="hover:text-gold">Financials</a></li>
-            <li><a href="#" className="hover:text-gold">Annual Report</a></li>
-            <li><a href="#" className="hover:text-gold">501(c)(3) Letter</a></li>
-          </ul>
-        </div>
-        <div>
-          <div className="text-xs font-semibold uppercase tracking-widest text-gold">Contact</div>
-          <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-            <li>Land O' Lakes, FL</li>
-            <li>info@serudsinc.org</li>
-            <li className="flex gap-3 pt-2">
+          <div className="font-display text-xl font-semibold">SERUDS Inc</div>
+          <address className="mt-3 not-italic text-sm leading-relaxed text-primary-foreground/80">
+            5126 Ballantrae Blvd.<br />
+            Land O' Lakes, FL 34638<br />
+            <a href="mailto:seruds.inc@gmail.com" className="hover:text-gold">seruds.inc@gmail.com</a><br />
+            <a href="tel:+13477174569" className="hover:text-gold">+1-347-717-4569</a>
+          </address>
+          <div className="mt-4">
+            <div className="text-xs font-semibold uppercase tracking-widest text-gold">Follow us on</div>
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">
               <a href="#" aria-label="Facebook" className="hover:text-gold">Facebook</a>
+              <a href="#" aria-label="Twitter" className="hover:text-gold">Twitter</a>
+              <a href="#" aria-label="YouTube" className="hover:text-gold">Youtube</a>
+              <a href="#" aria-label="LinkedIn" className="hover:text-gold">Linkedin</a>
               <a href="#" aria-label="Instagram" className="hover:text-gold">Instagram</a>
-              <a href="#" aria-label="YouTube" className="hover:text-gold">YouTube</a>
-            </li>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-widest text-gold">Pages</div>
+          <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
+            <li><Link to="/donate" className="hover:text-gold">Donate to 501(c)3 Nonprofit for India</Link></li>
+            <li><a href="https://www.paypal.com/paypalme/seruds" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Donate Via PayPal</a></li>
+            <li><a href="#" className="hover:text-gold">Testimonials</a></li>
+            <li><a href="#" className="hover:text-gold">Privacy Policy</a></li>
+            <li><a href="#" className="hover:text-gold">Terms and Conditions</a></li>
+            <li><a href="#" className="hover:text-gold">Refund and Cancellation Policy</a></li>
           </ul>
         </div>
       </div>
