@@ -43,7 +43,7 @@ function Hero() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroImg} alt="Children smiling in Kurnool, India" className="h-full w-full object-cover opacity-80" width={1920} height={1080} />
-        <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/85 via-forest-deep/60 to-forest-deep/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/75 via-forest-deep/50 to-forest-deep/10" />
       </div>
       <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-5 md:py-28 lg:py-36">
         <div className="md:col-span-3 text-primary-foreground">
