@@ -215,11 +215,11 @@ function OrphanagePage() {
           </div>
 
           <div className="text-center">
-            <div className="mx-auto w-fit overflow-hidden rounded-2xl ring-1 ring-primary-foreground/20">
+            <div className="mx-auto flex h-[30rem] w-full max-w-[24rem] items-center justify-center">
               <img
                 src={CHANDRAKALA_IMG}
                 alt="Chandrakala — a child supported by SERUDS Children's Home"
-                className="h-80 w-auto object-cover"
+                className="h-[24rem] w-[30rem] -rotate-90 rounded-2xl object-cover shadow-2xl ring-1 ring-primary-foreground/20"
                 loading="lazy"
               />
             </div>
