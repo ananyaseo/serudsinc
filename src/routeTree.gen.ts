@@ -14,9 +14,11 @@ import { Route as SponsorEducationRouteImport } from './routes/sponsor-education
 import { Route as OrphanageRouteImport } from './routes/orphanage'
 import { Route as OldAgeHomeRouteImport } from './routes/old-age-home'
 import { Route as GroceriesRouteImport } from './routes/groceries'
+import { Route as DonateForChildrenRouteImport } from './routes/donate-for-children'
 import { Route as DonateRouteImport } from './routes/donate'
 import { Route as CrecheRouteImport } from './routes/creche'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CharityForFoodRouteImport } from './routes/charity-for-food'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BeneficiariesIdRouteImport } from './routes/beneficiaries.$id'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
@@ -47,6 +49,11 @@ const GroceriesRoute = GroceriesRouteImport.update({
   path: '/groceries',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DonateForChildrenRoute = DonateForChildrenRouteImport.update({
+  id: '/donate-for-children',
+  path: '/donate-for-children',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DonateRoute = DonateRouteImport.update({
   id: '/donate',
   path: '/donate',
@@ -60,6 +67,11 @@ const CrecheRoute = CrecheRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CharityForFoodRoute = CharityForFoodRouteImport.update({
+  id: '/charity-for-food',
+  path: '/charity-for-food',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -85,9 +97,11 @@ const ApiPublicSeedKnowledgeRoute = ApiPublicSeedKnowledgeRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/donate-for-children': typeof DonateForChildrenRoute
   '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
@@ -99,9 +113,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/donate-for-children': typeof DonateForChildrenRoute
   '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
@@ -114,9 +130,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/donate-for-children': typeof DonateForChildrenRoute
   '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
   '/orphanage': typeof OrphanageRoute
@@ -130,9 +148,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/charity-for-food'
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/donate-for-children'
     | '/groceries'
     | '/old-age-home'
     | '/orphanage'
@@ -144,9 +164,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/charity-for-food'
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/donate-for-children'
     | '/groceries'
     | '/old-age-home'
     | '/orphanage'
@@ -158,9 +180,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/charity-for-food'
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/donate-for-children'
     | '/groceries'
     | '/old-age-home'
     | '/orphanage'
@@ -173,9 +197,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CharityForFoodRoute: typeof CharityForFoodRoute
   ContactRoute: typeof ContactRoute
   CrecheRoute: typeof CrecheRoute
   DonateRoute: typeof DonateRoute
+  DonateForChildrenRoute: typeof DonateForChildrenRoute
   GroceriesRoute: typeof GroceriesRoute
   OldAgeHomeRoute: typeof OldAgeHomeRoute
   OrphanageRoute: typeof OrphanageRoute
@@ -223,6 +249,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GroceriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/donate-for-children': {
+      id: '/donate-for-children'
+      path: '/donate-for-children'
+      fullPath: '/donate-for-children'
+      preLoaderRoute: typeof DonateForChildrenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/donate': {
       id: '/donate'
       path: '/donate'
@@ -242,6 +275,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/charity-for-food': {
+      id: '/charity-for-food'
+      path: '/charity-for-food'
+      fullPath: '/charity-for-food'
+      preLoaderRoute: typeof CharityForFoodRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -277,9 +317,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CharityForFoodRoute: CharityForFoodRoute,
   ContactRoute: ContactRoute,
   CrecheRoute: CrecheRoute,
   DonateRoute: DonateRoute,
+  DonateForChildrenRoute: DonateForChildrenRoute,
   GroceriesRoute: GroceriesRoute,
   OldAgeHomeRoute: OldAgeHomeRoute,
   OrphanageRoute: OrphanageRoute,

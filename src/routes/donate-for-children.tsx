@@ -4,34 +4,34 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 
 const HERO_IMG =
-  "https://serudsindia.org/wp-content/uploads/2019/10/Girl-Child-Education-Sponsorship-in-India-for-their-Career-1-1024x576.jpg";
+  "https://serudsinc.org/wp-content/uploads/2023/12/Donate-for-Poor-Children-Education-in-India.jpg";
 const ABOUT_IMG =
-  "https://serudsindia.org/wp-content/uploads/2022/03/Vocational-Tailoring-and-Sewing-Training-for-Poor-Women-min.jpg";
+  "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool.jpg";
 const STORY_IMG =
-  "https://serudsindia.org/wp-content/uploads/2022/03/Skill-Development-Training-for-Women-Empowerment-min.jpg";
+  "https://serudsinc.org/wp-content/uploads/2023/12/daycare-center-poor-children-800.jpg";
 
-export const Route = createFileRoute("/women-empowerment")({
+export const Route = createFileRoute("/donate-for-children")({
   head: () => ({
     meta: [
-      { title: "Support SERUDS Women Empowerment Programs in India" },
+      { title: "Donate for Children in India — Sponsor a Child with SERUDS Inc" },
       {
         name: "description",
         content:
-          "Empower women in Kurnool, Andhra Pradesh through vocational training in computer skills, tailoring, embroidery and fashion designing.",
+          "Sponsor a child in India and help fight malnutrition, child labor, abuse and dropping out of school. Support SERUDS NGO's life-saving programs.",
       },
-      { property: "og:title", content: "Support SERUDS Women Empowerment Programs" },
+      { property: "og:title", content: "Donate for Children in India" },
       {
         property: "og:description",
         content:
-          "Sponsor sewing machines, computer training and skill-development courses for economically disadvantaged women in India.",
+          "Rewrite a child's story — orphan care, education, day-care and protection through SERUDS Inc.",
       },
       { property: "og:image", content: HERO_IMG },
     ],
   }),
-  component: WomenEmpowermentPage,
+  component: DonateForChildrenPage,
 });
 
-function WomenEmpowermentPage() {
+function DonateForChildrenPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -41,17 +41,15 @@ function WomenEmpowermentPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full bg-gold/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-forest-deep">
-              Women Empowerment
+              Donate for Children
             </div>
             <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] md:text-6xl">
-              Support SERUDS Women Empowerment Programs
+              Sponsor a Child in India
             </h1>
-            <p className="mt-4 text-xl font-medium text-gold">
-              Empower Women Through Skills
-            </p>
             <p className="mt-5 max-w-xl text-lg text-primary-foreground/90">
-              Help economically disadvantaged women in Andhra Pradesh gain skills, sustainable
-              livelihoods and the confidence to break free from the cycle of poverty.
+              In the heart of India, countless children face daunting challenges — and together
+              we can rewrite their stories. Join us in transforming lives and creating brighter
+              futures for the underprivileged children of India.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -66,7 +64,7 @@ function WomenEmpowermentPage() {
                 rel="noopener noreferrer"
                 className="rounded-full border border-primary-foreground/40 px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
               >
-                Sponsor a Woman
+                Sponsor a Child
               </a>
             </div>
           </div>
@@ -75,7 +73,7 @@ function WomenEmpowermentPage() {
             <div className="overflow-hidden rounded-[2.5rem] shadow-2xl ring-1 ring-primary-foreground/10">
               <img
                 src={HERO_IMG}
-                alt="Young women in SERUDS women empowerment program"
+                alt="Underprivileged children supported by SERUDS in India"
                 className="aspect-[4/3] w-full object-cover"
               />
             </div>
@@ -83,54 +81,40 @@ function WomenEmpowermentPage() {
         </div>
       </section>
 
-      {/* Why Women Development Programs */}
+      {/* The Issues We Tackle */}
       <section className="bg-cream py-16 md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-border">
               <img
                 src={ABOUT_IMG}
-                alt="Vocational tailoring and sewing training for poor women"
+                alt="Children at SERUDS orphanage in Kurnool"
                 className="aspect-square w-full object-cover"
               />
             </div>
           </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-forest-deep/70">
-              Why Women Development Programs?
+              The Issues We Tackle
             </p>
             <h2 className="mt-3 font-display text-4xl font-semibold text-forest-deep">
-              Transforming Lives Through Skills
+              You Can Change a Child&apos;s Life Today
             </h2>
             <p className="mt-5 text-foreground/85 leading-relaxed">
-              SERUDS Inc. is a 501(c)(3) charity dedicated to transforming the lives of women in
-              Andhra Pradesh, India. Our mission is to empower economically disadvantaged women
-              by giving them the <strong>skills and resources</strong> they need to thrive as
-              entrepreneurs or secure better-paying jobs.
+              India is home to <strong>29.6 million orphaned and abandoned children</strong>,
+              with less than 1% finding shelter in Child Care Institutions. Every day, 300,000
+              children across the country face abuse and exploitation. Street children are
+              especially vulnerable.
             </p>
-            <p className="mt-4 text-foreground/85 leading-relaxed">
-              In villages and urban slums of Kurnool District, many women lack education and
-              employable skills, often resorting to low-skilled jobs or domestic work. SERUDS
-              has conducted thorough baseline surveys to identify the skills needed in the job
-              market — developing targeted training programs to address these gaps.
-            </p>
-
-            <h3 className="mt-8 font-display text-2xl font-semibold text-forest-deep">
-              Why Choose SERUDS Inc.?
-            </h3>
-            <ul className="mt-4 space-y-2 text-foreground/85">
-              <li>
-                <strong>✓ Direct Impact:</strong> Your donation funds training, machines and
-                materials — not overhead.
-              </li>
-              <li>
-                <strong>✓ Targeted Skills:</strong> Programs designed around real local
-                job-market demand.
-              </li>
-              <li>
-                <strong>✓ Sustainable Change:</strong> Self-sufficiency that breaks the cycle of
-                poverty for generations.
-              </li>
+            <ul className="mt-6 space-y-2 text-foreground/85">
+              <li><strong>✓ Malnutrition</strong> — hindering growth and development.</li>
+              <li><strong>✓ Dropping Out of School</strong> — financial constraints cut education short.</li>
+              <li><strong>✓ Running Away to the Streets</strong> — exposure to street dangers.</li>
+              <li><strong>✓ Forced Child Labor</strong> — exploitation robs them of childhood.</li>
+              <li><strong>✓ Early Marriage</strong> — especially for girls, with serious health costs.</li>
+              <li><strong>✓ Child Abuse</strong> — physical, emotional and sexual harm.</li>
+              <li><strong>✓ Substance Abuse</strong> — endemic on the street.</li>
+              <li><strong>✓ Illness &amp; High Mortality</strong> — driven by lack of healthcare.</li>
             </ul>
 
             <Link
@@ -143,51 +127,40 @@ function WomenEmpowermentPage() {
         </div>
       </section>
 
-      {/* Two-column: Vocational Training + Your Impact */}
+      {/* Two-column: Mission + Programs */}
       <section className="py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-2">
           <div className="rounded-3xl bg-card p-8 ring-1 ring-border shadow-sm">
             <h2 className="font-display text-3xl font-semibold text-forest-deep">
-              Vocational Training Programs: Unlocking Opportunities
+              Our Mission at SERUDS NGO
             </h2>
             <p className="mt-4 text-foreground/85">
-              Your donations equip women with essential, market-ready skills through programs
-              such as:
+              We work passionately to ensure that every child receives what they truly
+              deserve — a solid start in life, quality education and protection from harm.
             </p>
-            <h3 className="mt-6 font-display text-xl font-semibold text-forest-deep">
-              Computer Software Skills Training
-            </h3>
-            <ul className="mt-2 space-y-1 text-foreground/85">
-              <li><strong>Duration:</strong> 6 months</li>
-              <li><strong>Syllabus:</strong> Computer Fundamentals, MS Office, DTP, Internet Concepts &amp; Soft Skills</li>
-              <li><strong>Aim:</strong> Sustainable livelihoods by meeting demand for computer-trained professionals across Andhra Pradesh.</li>
-            </ul>
-            <h3 className="mt-6 font-display text-xl font-semibold text-forest-deep">
-              Tailoring &amp; Embroidery Training
-            </h3>
-            <ul className="mt-2 space-y-1 text-foreground/85">
-              <li><strong>Duration:</strong> 3 months</li>
-              <li><strong>Outcome:</strong> A free branded sewing machine and tool kit on graduation.</li>
-              <li><strong>Support:</strong> Help in establishing units, sourcing raw materials and selling finished products.</li>
-            </ul>
+            <p className="mt-4 text-foreground/85">
+              Since <strong>2003</strong>, SERUDS India has been rescuing street children and
+              orphans, providing them a chance at a brighter tomorrow. Your contribution can
+              make a significant impact on the lives of these children.
+            </p>
           </div>
 
           <div className="rounded-3xl bg-forest-deep p-8 text-primary-foreground shadow-sm">
             <h2 className="font-display text-3xl font-semibold">
-              Your Impact: Sponsorship Opportunities
+              Donate for SERUDS&apos; Charity Causes for Children
             </h2>
             <ul className="mt-5 space-y-4 text-primary-foreground/90">
               <li>
-                <strong className="text-gold">Computer Training:</strong> Support 50 deserving
-                youth each financial year and provide all study material free of cost.
+                <strong className="text-gold">SERUDS Children&apos;s Home (Orphanage):</strong> A
+                loving, secure environment for orphaned and abandoned children.
               </li>
               <li>
-                <strong className="text-gold">Tailoring &amp; Embroidery:</strong> Sponsor sewing
-                machines and tool kits for trained women and girls.
+                <strong className="text-gold">Sponsor a Child&apos;s Education:</strong> Breaking
+                the cycle of poverty through schooling, supplies and mentorship.
               </li>
               <li>
-                <strong className="text-gold">Fashion Designing:</strong> Help us expand the
-                program to cover more women across the district.
+                <strong className="text-gold">Day Care Centers for Children:</strong> A safe
+                space for vulnerable children to learn, eat and play while parents work.
               </li>
             </ul>
             <Link
@@ -200,7 +173,7 @@ function WomenEmpowermentPage() {
         </div>
       </section>
 
-      {/* Join our Mission — dark section, two-column */}
+      {/* Join our Mission */}
       <section className="bg-forest-deep py-16 text-primary-foreground md:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
           <div>
@@ -208,12 +181,12 @@ function WomenEmpowermentPage() {
               Join our Mission
             </p>
             <h2 className="mt-3 font-display text-5xl font-bold uppercase leading-[1] tracking-tight md:text-6xl">
-              Transform<br />a Woman&apos;s<br />Life Today
+              Make a<br />Difference<br />Today
             </h2>
             <p className="mt-6 max-w-md text-lg text-primary-foreground/90">
-              Every contribution, big or small, makes a difference. Please consider donating to
-              SERUDS Inc. and help us put skills, machines and self-confidence in the hands of
-              India&apos;s women.
+              Your donation today paves the way for a better tomorrow. Together let&apos;s
+              empower, educate and protect the dreams of these precious children. Because every
+              child deserves a chance to shine.
             </p>
             <div className="mt-8">
               <DonorboxEmbed campaign="donation-seruds-inc" />
@@ -224,17 +197,17 @@ function WomenEmpowermentPage() {
             <div className="mx-auto w-fit overflow-hidden rounded-2xl ring-1 ring-primary-foreground/20">
               <img
                 src={STORY_IMG}
-                alt="Skill development training for women's empowerment"
+                alt="Children at a SERUDS day-care center in Kurnool"
                 className="h-80 w-auto object-cover"
                 loading="lazy"
               />
             </div>
             <h3 className="mt-6 font-display text-2xl font-semibold text-gold">
-              Skills That Change a Family&apos;s Future
+              Every Child Deserves a Chance to Shine
             </h3>
             <p className="mx-auto mt-4 max-w-md text-primary-foreground/90">
-              A sewing machine. Six months of computer training. A first paycheck. Each becomes
-              the moment a household begins to rise out of poverty — for good.
+              From a safe orphanage bed to a school uniform to a hot midday meal at day-care —
+              your gift directly funds the safety net these children rely on.
             </p>
           </div>
         </div>
