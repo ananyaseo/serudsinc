@@ -3,6 +3,18 @@ import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Utensils, BookOpen, HeartHandshake, Sparkles, ShieldCheck, BadgeCheck, Lock, HeartPulse } from "lucide-react";
+import teleguManeesha from "@/assets/seruds/telegu-maneesha.jpg.asset.json";
+import meghanaD from "@/assets/seruds/meghana-d.jpg.asset.json";
+import ajayGoud from "@/assets/seruds/ajay-goud.jpg.asset.json";
+import kummariLakshmamma from "@/assets/seruds/kummari-lakshmamma.jpg.asset.json";
+
+const ORPHAN_GROUP_IMG = "https://serudsinc.org/wp-content/uploads/2023/12/Orphan-Group-600-min.jpg";
+const HERO_BENEFICIARY_IMGS = [
+  { src: teleguManeesha.url, alt: "Telegu Maneesha" },
+  { src: meghanaD.url, alt: "Meghana" },
+  { src: ajayGoud.url, alt: "Ajay Goud" },
+  { src: kummariLakshmamma.url, alt: "Kummari Lakshmamma" },
+];
 
 export const Route = createFileRoute("/donate")({
   head: () => ({
