@@ -15,7 +15,7 @@ export function SiteFooter() {
   }, []);
 
   return (
-    <footer className="bg-forest-deep text-primary-foreground">
+    <footer className="bg-teal-deep text-primary-foreground">
       <div className="border-b border-white/10 bg-gold/95 text-forest-deep">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-3 text-center text-sm font-semibold sm:flex-row sm:text-left">
           <span>100% of your donation goes directly to India — zero deducted for US operations.</span>
