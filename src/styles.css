@@ -101,6 +101,7 @@
   --gold-deep: oklch(0.68 0.17 60);
   --forest: oklch(0.32 0.07 155);
   --forest-deep: oklch(0.22 0.05 155);
+  --teal-deep: oklch(0.34 0.06 195);
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
