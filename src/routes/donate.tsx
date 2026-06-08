@@ -3,6 +3,18 @@ import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { Utensils, BookOpen, HeartHandshake, Sparkles, ShieldCheck, BadgeCheck, Lock, HeartPulse } from "lucide-react";
+import teleguManeesha from "@/assets/seruds/telegu-maneesha.jpg.asset.json";
+import meghanaD from "@/assets/seruds/meghana-d.jpg.asset.json";
+import ajayGoud from "@/assets/seruds/ajay-goud.jpg.asset.json";
+import kummariLakshmamma from "@/assets/seruds/kummari-lakshmamma.jpg.asset.json";
+
+const ORPHAN_GROUP_IMG = "https://serudsinc.org/wp-content/uploads/2023/12/Orphan-Group-600-min.jpg";
+const HERO_BENEFICIARY_IMGS = [
+  { src: teleguManeesha.url, alt: "Telegu Maneesha" },
+  { src: meghanaD.url, alt: "Meghana" },
+  { src: ajayGoud.url, alt: "Ajay Goud" },
+  { src: kummariLakshmamma.url, alt: "Kummari Lakshmamma" },
+];
 
 export const Route = createFileRoute("/donate")({
   head: () => ({
@@ -47,13 +59,8 @@ function DonatePage() {
             </div>
           </div>
           <div className="lg:col-span-2 grid grid-cols-2 gap-3">
-            {[
-              "https://serudsinc.org/wp-content/uploads/2019/09/Sponsoring_girl_children_by_donating_education_support-1.jpg",
-              "https://serudsinc.org/wp-content/uploads/2021/02/old-age-home-andhra-pradesh.jpg",
-              "https://serudsinc.org/wp-content/uploads/2020/09/feed-orphanage-in-india.jpg",
-              "https://serudsinc.org/wp-content/uploads/2020/03/women-empowerment-in-india.jpg",
-            ].map((src, i) => (
-              <img key={i} src={src} alt="SERUDS beneficiaries" className={`h-40 md:h-48 w-full object-cover rounded-2xl shadow-xl ${i % 2 ? "translate-y-6" : ""}`} loading="lazy" />
+            {HERO_BENEFICIARY_IMGS.map((img, i) => (
+              <img key={i} src={img.src} alt={img.alt} className={`h-40 md:h-48 w-full object-cover rounded-2xl shadow-xl ${i % 2 ? "translate-y-6" : ""}`} loading="lazy" />
             ))}
           </div>
         </div>
@@ -134,8 +141,8 @@ function DonatePage() {
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-[#0F4C81]">From Despair to Hope</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-[200px_1fr] items-start">
               <img
-                src="https://serudsinc.org/wp-content/uploads/2020/09/orphanage-in-india.jpg"
-                alt="Child supported by SERUDS"
+                src={ORPHAN_GROUP_IMG}
+                alt="Children at SERUDS orphanage"
                 className="w-full h-48 md:h-56 object-cover rounded-2xl"
                 loading="lazy"
               />
@@ -181,8 +188,7 @@ function DonatePage() {
               We believe every donor deserves to know how their generosity creates impact. SERUDS Inc. maintains financial accountability and transparency to ensure donations reach the people and programs that need them most.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link to="/" className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0F4C81] hover:bg-white/90">View Financial Information</Link>
-              <Link to="/" className="rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/20">View Annual Reports</Link>
+              <a href="https://app.candid.org/profile/14056477/seruds-inc-88-1610707" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0F4C81] hover:bg-white/90">View Profile on Candid.org</a>
               <Link to="/contact" className="rounded-full bg-[#F97316] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#ea6a0c]">Contact Us</Link>
             </div>
           </section>
