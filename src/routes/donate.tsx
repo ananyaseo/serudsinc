@@ -59,13 +59,8 @@ function DonatePage() {
             </div>
           </div>
           <div className="lg:col-span-2 grid grid-cols-2 gap-3">
-            {[
-              "https://serudsinc.org/wp-content/uploads/2019/09/Sponsoring_girl_children_by_donating_education_support-1.jpg",
-              "https://serudsinc.org/wp-content/uploads/2021/02/old-age-home-andhra-pradesh.jpg",
-              "https://serudsinc.org/wp-content/uploads/2020/09/feed-orphanage-in-india.jpg",
-              "https://serudsinc.org/wp-content/uploads/2020/03/women-empowerment-in-india.jpg",
-            ].map((src, i) => (
-              <img key={i} src={src} alt="SERUDS beneficiaries" className={`h-40 md:h-48 w-full object-cover rounded-2xl shadow-xl ${i % 2 ? "translate-y-6" : ""}`} loading="lazy" />
+            {HERO_BENEFICIARY_IMGS.map((img, i) => (
+              <img key={i} src={img.src} alt={img.alt} className={`h-40 md:h-48 w-full object-cover rounded-2xl shadow-xl ${i % 2 ? "translate-y-6" : ""}`} loading="lazy" />
             ))}
           </div>
         </div>
