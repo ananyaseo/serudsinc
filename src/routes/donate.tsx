@@ -141,8 +141,8 @@ function DonatePage() {
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-[#0F4C81]">From Despair to Hope</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-[200px_1fr] items-start">
               <img
-                src="https://serudsinc.org/wp-content/uploads/2020/09/orphanage-in-india.jpg"
-                alt="Child supported by SERUDS"
+                src={ORPHAN_GROUP_IMG}
+                alt="Children at SERUDS orphanage"
                 className="w-full h-48 md:h-56 object-cover rounded-2xl"
                 loading="lazy"
               />
