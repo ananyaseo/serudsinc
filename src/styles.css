@@ -113,6 +113,7 @@
   --color-gold-deep: var(--gold-deep);
   --color-forest: var(--forest);
   --color-forest-deep: var(--forest-deep);
+  --color-teal-deep: var(--teal-deep);
 }
 
 body {
