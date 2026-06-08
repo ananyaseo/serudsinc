@@ -188,8 +188,7 @@ function DonatePage() {
               We believe every donor deserves to know how their generosity creates impact. SERUDS Inc. maintains financial accountability and transparency to ensure donations reach the people and programs that need them most.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link to="/" className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0F4C81] hover:bg-white/90">View Financial Information</Link>
-              <Link to="/" className="rounded-full bg-white/10 px-5 py-2.5 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/20">View Annual Reports</Link>
+              <a href="https://app.candid.org/profile/14056477/seruds-inc-88-1610707" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0F4C81] hover:bg-white/90">View Profile on Candid.org</a>
               <Link to="/contact" className="rounded-full bg-[#F97316] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#ea6a0c]">Contact Us</Link>
             </div>
           </section>
