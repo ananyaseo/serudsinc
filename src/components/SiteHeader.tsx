@@ -59,7 +59,29 @@ export function SiteHeader() {
           </div>
         </Link>
         <nav className="hidden items-center gap-7 text-sm font-medium text-forest-deep md:flex">
-          <Link to="/" className="hover:text-gold-deep">Home</Link>
+          {/* Home dropdown */}
+          <div className="group relative">
+            <button
+              type="button"
+              className="inline-flex items-center gap-1 hover:text-gold-deep focus:outline-none"
+              aria-haspopup="true"
+            >
+              Home
+              <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+            </button>
+            <div className="invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div className="overflow-hidden rounded-xl border border-border bg-background shadow-xl ring-1 ring-border/50">
+                <ul className="py-2">
+                  <li>
+                    <Link to="/" className="block px-4 py-2.5 text-sm text-forest-deep hover:bg-cream hover:text-gold-deep">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/about" className="block px-4 py-2.5 text-sm text-forest-deep hover:bg-cream hover:text-gold-deep">About Us</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <Link to="/orphanage" className="hover:text-gold-deep">Orphanage</Link>
           <Link to="/sponsor-education" className="hover:text-gold-deep">Sponsor Education</Link>
           <Link to="/women-empowerment" className="hover:text-gold-deep">Women Empowerment</Link>
