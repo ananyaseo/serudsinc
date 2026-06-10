@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Facebook, Twitter, Youtube, Linkedin, Instagram } from "lucide-react";
 
-export function SiteFooter() {
+export function SiteFooter({ showAnanyaCredit = false }: { showAnanyaCredit?: boolean } = {}) {
   useEffect(() => {
     const id = "donorbox-widgets-js";
     if (document.getElementById(id)) return;
@@ -73,10 +73,12 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-primary-foreground/60">
         <div>© {new Date().getFullYear()} SERUDS Inc. All rights reserved.</div>
-        <div className="mt-1">
-          Website Development and Digital marketing by{" "}
-          <a href="https://www.ananyaseo.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-gold hover:underline">Ananya SEO</a>
-        </div>
+        {showAnanyaCredit && (
+          <div className="mt-1">
+            Website Development and Digital marketing by{" "}
+            <a href="https://www.ananyaseo.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-gold hover:underline">Ananya SEO</a>
+          </div>
+        )}
       </div>
     </footer>
   );
