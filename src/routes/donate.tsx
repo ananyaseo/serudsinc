@@ -235,7 +235,7 @@ function DonatePage() {
         Donate Now →
       </a>
 
-      <SiteFooter />
+      <SiteFooter showAnanyaCredit />
     </div>
   );
 }
