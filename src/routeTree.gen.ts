@@ -20,7 +20,6 @@ import { Route as CrecheRouteImport } from './routes/creche'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CharityForFoodRouteImport } from './routes/charity-for-food'
 import { Route as AboutRouteImport } from './routes/about'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BeneficiariesIdRouteImport } from './routes/beneficiaries.$id'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
@@ -74,11 +73,6 @@ const ContactRoute = ContactRouteImport.update({
 const CharityForFoodRoute = CharityForFoodRouteImport.update({
   id: '/charity-for-food',
   path: '/charity-for-food',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
