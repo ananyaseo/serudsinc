@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Facebook, Twitter, Youtube, Linkedin, Instagram } from "lucide-react";
 
-export function SiteFooter() {
+export function SiteFooter({ showAnanyaCredit = false }: { showAnanyaCredit?: boolean } = {}) {
   useEffect(() => {
     const id = "donorbox-widgets-js";
     if (document.getElementById(id)) return;
