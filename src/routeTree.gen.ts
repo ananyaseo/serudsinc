@@ -19,6 +19,7 @@ import { Route as DonateRouteImport } from './routes/donate'
 import { Route as CrecheRouteImport } from './routes/creche'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CharityForFoodRouteImport } from './routes/charity-for-food'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BeneficiariesIdRouteImport } from './routes/beneficiaries.$id'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
@@ -74,6 +75,11 @@ const CharityForFoodRoute = CharityForFoodRouteImport.update({
   path: '/charity-for-food',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -97,6 +103,7 @@ const ApiPublicSeedKnowledgeRoute = ApiPublicSeedKnowledgeRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
@@ -113,6 +120,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
@@ -130,6 +138,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/charity-for-food'
     | '/contact'
     | '/creche'
@@ -164,6 +174,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/charity-for-food'
     | '/contact'
     | '/creche'
@@ -180,6 +191,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/charity-for-food'
     | '/contact'
     | '/creche'
@@ -197,6 +209,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   CharityForFoodRoute: typeof CharityForFoodRoute
   ContactRoute: typeof ContactRoute
   CrecheRoute: typeof CrecheRoute
@@ -284,6 +297,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CharityForFoodRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -317,6 +337,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   CharityForFoodRoute: CharityForFoodRoute,
   ContactRoute: ContactRoute,
   CrecheRoute: CrecheRoute,
