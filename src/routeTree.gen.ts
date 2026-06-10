@@ -104,6 +104,7 @@ const ApiPublicSeedKnowledgeRoute = ApiPublicSeedKnowledgeRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/about': typeof AboutRoute
   '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
@@ -120,6 +121,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/about': typeof AboutRoute
   '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
@@ -138,6 +140,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/about': typeof AboutRoute
   '/charity-for-food': typeof CharityForFoodRoute
   '/contact': typeof ContactRoute
@@ -158,6 +161,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/about'
     | '/charity-for-food'
     | '/contact'
     | '/creche'
@@ -174,6 +178,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/about'
     | '/charity-for-food'
     | '/contact'
@@ -192,6 +197,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/about'
     | '/charity-for-food'
     | '/contact'
     | '/creche'
@@ -209,6 +215,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   AboutRoute: typeof AboutRoute
   CharityForFoodRoute: typeof CharityForFoodRoute
   ContactRoute: typeof ContactRoute
@@ -304,6 +311,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -337,6 +351,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   AboutRoute: AboutRoute,
   CharityForFoodRoute: CharityForFoodRoute,
   ContactRoute: ContactRoute,
