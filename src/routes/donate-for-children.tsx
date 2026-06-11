@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
+import creche6 from "@/assets/seruds/creche-6.jpg.asset.json";
 
 const HERO_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/Donate-for-Poor-Children-Education-in-India.jpg";
@@ -9,6 +10,11 @@ const ABOUT_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool.jpg";
 const STORY_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/daycare-center-poor-children-800.jpg";
+const ORPHANAGE_IMG =
+  "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool.jpg";
+const SPONSOR_EDU_IMG =
+  "https://serudsinc.org/wp-content/uploads/2023/12/sponsor-education-poor-children-india.jpg";
+const DAYCARE_IMG = creche6.url;
 
 export const Route = createFileRoute("/donate-for-children")({
   head: () => ({
