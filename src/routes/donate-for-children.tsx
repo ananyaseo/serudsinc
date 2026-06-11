@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import creche6 from "@/assets/seruds/creche-6.jpg.asset.json";
+import sponsorGirlsAsset from "@/assets/seruds/sponsor-girls-education.jpg.asset.json";
 
 const HERO_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/Donate-for-Poor-Children-Education-in-India.jpg";
