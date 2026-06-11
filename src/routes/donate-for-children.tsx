@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import creche6 from "@/assets/seruds/creche-6.jpg.asset.json";
+import sponsorGirlsAsset from "@/assets/seruds/sponsor-girls-education.jpg.asset.json";
 
 const HERO_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/Donate-for-Poor-Children-Education-in-India.jpg";
@@ -12,8 +13,7 @@ const STORY_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/daycare-center-poor-children-800.jpg";
 const ORPHANAGE_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool.jpg";
-const SPONSOR_EDU_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/sponsor-education-poor-children-india.jpg";
+const SPONSOR_EDU_IMG = sponsorGirlsAsset.url;
 const DAYCARE_IMG = creche6.url;
 
 export const Route = createFileRoute("/donate-for-children")({
@@ -92,11 +92,15 @@ function DonateForChildrenPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-border">
-              <img
-                src={ABOUT_IMG}
-                alt="Children at SERUDS orphanage in Kurnool"
-                className="aspect-square w-full object-cover"
-              />
+              <div className="aspect-video w-full">
+                <iframe
+                  src="https://www.youtube.com/embed/4uaS54wgIMk"
+                  title="SERUDS children video"
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </div>
           <div>
