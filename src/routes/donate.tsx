@@ -139,11 +139,11 @@ function DonatePage() {
           {/* Real impact story */}
           <section className="rounded-3xl bg-white p-6 md:p-10 shadow-md ring-1 ring-slate-100">
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-[#0F4C81]">From Despair to Hope</h2>
-            <div className="mt-6 grid gap-6 md:grid-cols-[200px_1fr] items-start">
+            <div className="mt-6 grid gap-6 md:grid-cols-[1fr_1fr] items-start">
               <img
                 src={ORPHAN_GROUP_IMG}
                 alt="Children at SERUDS orphanage"
-                className="w-full h-48 md:h-56 object-cover rounded-2xl"
+                className="w-full h-72 md:h-96 object-cover rounded-2xl shadow-md"
                 loading="lazy"
               />
               <div>
