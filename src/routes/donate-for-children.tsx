@@ -13,8 +13,7 @@ const STORY_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/daycare-center-poor-children-800.jpg";
 const ORPHANAGE_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool.jpg";
-const SPONSOR_EDU_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/sponsor-education-poor-children-india.jpg";
+const SPONSOR_EDU_IMG = sponsorGirlsAsset.url;
 const DAYCARE_IMG = creche6.url;
 
 export const Route = createFileRoute("/donate-for-children")({
