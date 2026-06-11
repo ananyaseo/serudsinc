@@ -127,9 +127,9 @@ function DonateForChildrenPage() {
         </div>
       </section>
 
-      {/* Two-column: Mission + Programs */}
+      {/* Mission */}
       <section className="py-16 md:py-20">
-        <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-2">
+        <div className="mx-auto max-w-6xl px-6">
           <div className="rounded-3xl bg-card p-8 ring-1 ring-border shadow-sm">
             <h2 className="font-display text-3xl font-semibold text-forest-deep">
               Our Mission at SERUDS NGO
@@ -144,28 +144,77 @@ function DonateForChildrenPage() {
               make a significant impact on the lives of these children.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="rounded-3xl bg-forest-deep p-8 text-primary-foreground shadow-sm">
-            <h2 className="font-display text-3xl font-semibold">
+      {/* 3-column Causes */}
+      <section className="bg-cream py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center">
+            <h2 className="font-display text-3xl font-semibold text-forest-deep md:text-4xl">
               Donate for SERUDS&apos; Charity Causes for Children
             </h2>
-            <ul className="mt-5 space-y-4 text-primary-foreground/90">
-              <li>
-                <strong className="text-gold">SERUDS Children&apos;s Home (Orphanage):</strong> A
-                loving, secure environment for orphaned and abandoned children.
-              </li>
-              <li>
-                <strong className="text-gold">Sponsor a Child&apos;s Education:</strong> Breaking
-                the cycle of poverty through schooling, supplies and mentorship.
-              </li>
-              <li>
-                <strong className="text-gold">Day Care Centers for Children:</strong> A safe
-                space for vulnerable children to learn, eat and play while parents work.
-              </li>
-            </ul>
+            <p className="mx-auto mt-4 max-w-2xl text-foreground/80">
+              Choose a cause close to your heart and help transform a child&apos;s life today.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {[
+              {
+                img: ORPHANAGE_IMG,
+                title: "SERUDS Children's Home (Orphanage)",
+                text: "A loving, secure environment for orphaned and abandoned children — providing shelter, nutrition, education and care.",
+                href: "/orphanage",
+                cta: "Learn More",
+              },
+              {
+                img: SPONSOR_EDU_IMG,
+                title: "Sponsor a Child's Education",
+                text: "Break the cycle of poverty through schooling, supplies, uniforms, books and mentorship for underprivileged children.",
+                href: "/sponsor-education",
+                cta: "Learn More",
+              },
+              {
+                img: DAYCARE_IMG,
+                title: "Day Care Centers for Children",
+                text: "A safe space for vulnerable children of working parents to learn, eat and play while their parents earn a living.",
+                href: null,
+                cta: null,
+              },
+            ].map((c) => (
+              <div
+                key={c.title}
+                className="flex flex-col overflow-hidden rounded-3xl bg-background shadow-md ring-1 ring-border transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <img
+                  src={c.img}
+                  alt={c.title}
+                  className="aspect-[4/3] w-full object-cover"
+                  loading="lazy"
+                />
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-display text-xl font-semibold text-forest-deep">
+                    {c.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm text-foreground/80">{c.text}</p>
+                  {c.href && c.cta && (
+                    <Link
+                      to={c.href}
+                      className="mt-5 inline-flex w-fit items-center rounded-full bg-gold px-5 py-2.5 text-sm font-bold text-forest-deep shadow-sm hover:bg-gold-deep hover:text-primary-foreground"
+                    >
+                      {c.cta} →
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
             <Link
               to="/donate"
-              className="mt-8 inline-flex rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-md hover:bg-gold-deep hover:text-primary-foreground"
+              className="inline-flex rounded-full bg-forest-deep px-8 py-3.5 text-sm font-bold text-primary-foreground shadow-md hover:bg-gold hover:text-forest-deep"
             >
               Donate Now →
             </Link>
