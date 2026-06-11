@@ -92,11 +92,15 @@ function DonateForChildrenPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-border">
-              <img
-                src={ABOUT_IMG}
-                alt="Children at SERUDS orphanage in Kurnool"
-                className="aspect-square w-full object-cover"
-              />
+              <div className="aspect-video w-full">
+                <iframe
+                  src="https://www.youtube.com/embed/4uaS54wgIMk"
+                  title="SERUDS children video"
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </div>
           <div>
