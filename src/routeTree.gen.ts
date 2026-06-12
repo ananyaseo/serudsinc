@@ -15,6 +15,7 @@ import { Route as OrphanageRouteImport } from './routes/orphanage'
 import { Route as OldAgeHomeRouteImport } from './routes/old-age-home'
 import { Route as GroceriesRouteImport } from './routes/groceries'
 import { Route as DonateForChildrenRouteImport } from './routes/donate-for-children'
+import { Route as DonateEldersIndiaRouteImport } from './routes/donate-elders-india'
 import { Route as DonateRouteImport } from './routes/donate'
 import { Route as CrecheRouteImport } from './routes/creche'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -53,6 +54,11 @@ const GroceriesRoute = GroceriesRouteImport.update({
 const DonateForChildrenRoute = DonateForChildrenRouteImport.update({
   id: '/donate-for-children',
   path: '/donate-for-children',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DonateEldersIndiaRoute = DonateEldersIndiaRouteImport.update({
+  id: '/donate-elders-india',
+  path: '/donate-elders-india',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DonateRoute = DonateRouteImport.update({
@@ -108,6 +114,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/donate-elders-india': typeof DonateEldersIndiaRoute
   '/donate-for-children': typeof DonateForChildrenRoute
   '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
@@ -125,6 +132,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/donate-elders-india': typeof DonateEldersIndiaRoute
   '/donate-for-children': typeof DonateForChildrenRoute
   '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
@@ -143,6 +151,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/creche': typeof CrecheRoute
   '/donate': typeof DonateRoute
+  '/donate-elders-india': typeof DonateEldersIndiaRoute
   '/donate-for-children': typeof DonateForChildrenRoute
   '/groceries': typeof GroceriesRoute
   '/old-age-home': typeof OldAgeHomeRoute
@@ -162,6 +171,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/donate-elders-india'
     | '/donate-for-children'
     | '/groceries'
     | '/old-age-home'
@@ -179,6 +189,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/donate-elders-india'
     | '/donate-for-children'
     | '/groceries'
     | '/old-age-home'
@@ -196,6 +207,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/creche'
     | '/donate'
+    | '/donate-elders-india'
     | '/donate-for-children'
     | '/groceries'
     | '/old-age-home'
@@ -214,6 +226,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CrecheRoute: typeof CrecheRoute
   DonateRoute: typeof DonateRoute
+  DonateEldersIndiaRoute: typeof DonateEldersIndiaRoute
   DonateForChildrenRoute: typeof DonateForChildrenRoute
   GroceriesRoute: typeof GroceriesRoute
   OldAgeHomeRoute: typeof OldAgeHomeRoute
@@ -267,6 +280,13 @@ declare module '@tanstack/react-router' {
       path: '/donate-for-children'
       fullPath: '/donate-for-children'
       preLoaderRoute: typeof DonateForChildrenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/donate-elders-india': {
+      id: '/donate-elders-india'
+      path: '/donate-elders-india'
+      fullPath: '/donate-elders-india'
+      preLoaderRoute: typeof DonateEldersIndiaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/donate': {
@@ -342,6 +362,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CrecheRoute: CrecheRoute,
   DonateRoute: DonateRoute,
+  DonateEldersIndiaRoute: DonateEldersIndiaRoute,
   DonateForChildrenRoute: DonateForChildrenRoute,
   GroceriesRoute: GroceriesRoute,
   OldAgeHomeRoute: OldAgeHomeRoute,
@@ -355,3 +376,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
