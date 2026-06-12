@@ -2,11 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
+import heroBannerAsset from "@/assets/seruds/midday-meals-elders-banner.jpg.asset.json";
 
-const HERO_IMG =
-  "https://serudsindia.org/wp-content/uploads/2022/07/Grocery-Distribution-for-Old-age-scaled-1-1536x422.jpg";
-const ABOUT_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/donate-food-old-age-people.jpg";
+const HERO_IMG = heroBannerAsset.url;
+const ABOUT_IMG = heroBannerAsset.url;
 const STORY_IMG =
   "https://serudsinc.org/wp-content/uploads/2024/01/old-age-woman-600-min.jpg";
 
