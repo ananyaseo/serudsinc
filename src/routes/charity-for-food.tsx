@@ -223,20 +223,36 @@ function CharityForFoodPage() {
             <h3 className="mt-6 font-display text-2xl font-semibold text-gold">
               Program Objectives &amp; Impact
             </h3>
-            <ul className="mx-auto mt-4 max-w-md space-y-3 text-left text-primary-foreground/90">
+            <p className="mt-4 text-left text-primary-foreground/90">
+              The primary objective of this program is to alleviate hunger among the elderly
+              homeless population in Kurnool. However, the impact of regular meal provision
+              extends far beyond mere physical sustenance:
+            </p>
+            <ul className="mx-auto mt-5 max-w-md space-y-4 text-left text-primary-foreground/90">
               <li>
-                <strong className="text-gold">Improve Health &amp; Well-being</strong> — nutrition
-                strengthens immunity and energy.
+                <strong className="text-gold">Improves Health &amp; Well-being</strong> —
+                Regular, nutritious meals strengthen the immune system, boost energy levels,
+                and contribute to overall better health for these vulnerable seniors.
               </li>
               <li>
-                <strong className="text-gold">Restore Human Dignity</strong> — a respectful,
-                caring environment for the forgotten.
+                <strong className="text-gold">Restores Human Dignity</strong> — Beyond the
+                physical nourishment, our program offers these elders a sense of dignity and
+                community. They are treated with respect and care, in a setting that values
+                their presence.
               </li>
               <li>
-                <strong className="text-gold">Provide Food Security</strong> — guaranteed
-                groceries every month, without fail.
+                <strong className="text-gold">Provides Food Security</strong> — Your elder
+                knows they will have groceries every month without fail. This security
+                reduces anxiety and allows them to plan their meals and manage their limited
+                resources.
+              </li>
+              <li>
+                <strong className="text-gold">Builds Community</strong> — Mealtimes become
+                moments of connection — elders share stories, friendships and a sense of
+                belonging often lost after abandonment.
               </li>
             </ul>
+
           </div>
         </div>
       </section>
