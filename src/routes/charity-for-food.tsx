@@ -2,11 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
+import heroBannerAsset from "@/assets/seruds/midday-meals-elders-banner.jpg.asset.json";
 
-const HERO_IMG =
-  "https://serudsindia.org/wp-content/uploads/2022/07/Grocery-Distribution-for-Old-age-scaled-1-1536x422.jpg";
-const ABOUT_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/donate-food-old-age-people.jpg";
+const HERO_IMG = heroBannerAsset.url;
+const ABOUT_IMG = heroBannerAsset.url;
 const STORY_IMG =
   "https://serudsinc.org/wp-content/uploads/2024/01/old-age-woman-600-min.jpg";
 
@@ -38,51 +37,52 @@ function CharityForFoodPage() {
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-forest-deep text-primary-foreground">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-gold/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-forest-deep">
-              Charity for Food
-            </div>
-            <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] md:text-6xl">
-              Feed Hungry Elders in India
-            </h1>
-            <p className="mt-4 text-xl font-medium text-gold">
-              Our Mission &amp; Vision
-            </p>
-            <p className="mt-5 max-w-xl text-lg text-primary-foreground/90">
-              Your donation helps provide nutritious meals and essential support to
-              impoverished elderly individuals in India who struggle with hunger and abandonment
-              every day.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/donate"
-                className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
-              >
-                Donate Now →
-              </Link>
-              <a
-                href="https://donorbox.org/donation-seruds-inc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-primary-foreground/40 px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                Sponsor an Elder
-              </a>
-            </div>
+        <div className="absolute inset-0">
+          <img
+            src={HERO_IMG}
+            alt="Destitute elderly women receiving midday meals at SERUDS"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/85 via-forest-deep/65 to-forest-deep/40" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-36">
+          <div className="inline-flex items-center gap-2 rounded-full bg-gold/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-forest-deep">
+            Charity for Food
           </div>
+          <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] md:text-6xl max-w-3xl">
+            Feed Hungry Elders in India
+          </h1>
+        </div>
+      </section>
 
-          <div className="relative">
-            <div className="overflow-hidden rounded-[2.5rem] shadow-2xl ring-1 ring-primary-foreground/10">
-              <img
-                src={HERO_IMG}
-                alt="Grocery distribution for destitute elders by SERUDS"
-                className="aspect-[4/3] w-full object-cover"
-              />
-            </div>
+      {/* Intro below hero */}
+      <section className="bg-background py-12 md:py-16">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <p className="text-xl font-medium text-forest-deep">Our Mission &amp; Vision</p>
+          <p className="mt-4 text-lg text-foreground/85">
+            Your donation helps provide nutritious meals and essential support to
+            impoverished elderly individuals in India who struggle with hunger and abandonment
+            every day.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link
+              to="/donate"
+              className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
+            >
+              Donate Now →
+            </Link>
+            <a
+              href="https://donorbox.org/donation-seruds-inc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-forest-deep/30 px-7 py-3.5 text-sm font-semibold text-forest-deep hover:bg-forest-deep/5"
+            >
+              Sponsor an Elder
+            </a>
           </div>
         </div>
       </section>
+
 
       {/* The Harsh Reality */}
       <section className="bg-cream py-16 md:py-24">
@@ -223,20 +223,36 @@ function CharityForFoodPage() {
             <h3 className="mt-6 font-display text-2xl font-semibold text-gold">
               Program Objectives &amp; Impact
             </h3>
-            <ul className="mx-auto mt-4 max-w-md space-y-3 text-left text-primary-foreground/90">
+            <p className="mt-4 text-left text-primary-foreground/90">
+              The primary objective of this program is to alleviate hunger among the elderly
+              homeless population in Kurnool. However, the impact of regular meal provision
+              extends far beyond mere physical sustenance:
+            </p>
+            <ul className="mx-auto mt-5 max-w-md space-y-4 text-left text-primary-foreground/90">
               <li>
-                <strong className="text-gold">Improve Health &amp; Well-being</strong> — nutrition
-                strengthens immunity and energy.
+                <strong className="text-gold">Improves Health &amp; Well-being</strong> —
+                Regular, nutritious meals strengthen the immune system, boost energy levels,
+                and contribute to overall better health for these vulnerable seniors.
               </li>
               <li>
-                <strong className="text-gold">Restore Human Dignity</strong> — a respectful,
-                caring environment for the forgotten.
+                <strong className="text-gold">Restores Human Dignity</strong> — Beyond the
+                physical nourishment, our program offers these elders a sense of dignity and
+                community. They are treated with respect and care, in a setting that values
+                their presence.
               </li>
               <li>
-                <strong className="text-gold">Provide Food Security</strong> — guaranteed
-                groceries every month, without fail.
+                <strong className="text-gold">Provides Food Security</strong> — Your elder
+                knows they will have groceries every month without fail. This security
+                reduces anxiety and allows them to plan their meals and manage their limited
+                resources.
+              </li>
+              <li>
+                <strong className="text-gold">Builds Community</strong> — Mealtimes become
+                moments of connection — elders share stories, friendships and a sense of
+                belonging often lost after abandonment.
               </li>
             </ul>
+
           </div>
         </div>
       </section>
