@@ -37,51 +37,52 @@ function CharityForFoodPage() {
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-forest-deep text-primary-foreground">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-gold/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-forest-deep">
-              Charity for Food
-            </div>
-            <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] md:text-6xl">
-              Feed Hungry Elders in India
-            </h1>
-            <p className="mt-4 text-xl font-medium text-gold">
-              Our Mission &amp; Vision
-            </p>
-            <p className="mt-5 max-w-xl text-lg text-primary-foreground/90">
-              Your donation helps provide nutritious meals and essential support to
-              impoverished elderly individuals in India who struggle with hunger and abandonment
-              every day.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/donate"
-                className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
-              >
-                Donate Now →
-              </Link>
-              <a
-                href="https://donorbox.org/donation-seruds-inc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-primary-foreground/40 px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                Sponsor an Elder
-              </a>
-            </div>
+        <div className="absolute inset-0">
+          <img
+            src={HERO_IMG}
+            alt="Destitute elderly women receiving midday meals at SERUDS"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/85 via-forest-deep/65 to-forest-deep/40" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-36">
+          <div className="inline-flex items-center gap-2 rounded-full bg-gold/95 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-forest-deep">
+            Charity for Food
           </div>
+          <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] md:text-6xl max-w-3xl">
+            Feed Hungry Elders in India
+          </h1>
+        </div>
+      </section>
 
-          <div className="relative">
-            <div className="overflow-hidden rounded-[2.5rem] shadow-2xl ring-1 ring-primary-foreground/10">
-              <img
-                src={HERO_IMG}
-                alt="Grocery distribution for destitute elders by SERUDS"
-                className="aspect-[4/3] w-full object-cover"
-              />
-            </div>
+      {/* Intro below hero */}
+      <section className="bg-background py-12 md:py-16">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <p className="text-xl font-medium text-forest-deep">Our Mission &amp; Vision</p>
+          <p className="mt-4 text-lg text-foreground/85">
+            Your donation helps provide nutritious meals and essential support to
+            impoverished elderly individuals in India who struggle with hunger and abandonment
+            every day.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link
+              to="/donate"
+              className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
+            >
+              Donate Now →
+            </Link>
+            <a
+              href="https://donorbox.org/donation-seruds-inc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-forest-deep/30 px-7 py-3.5 text-sm font-semibold text-forest-deep hover:bg-forest-deep/5"
+            >
+              Sponsor an Elder
+            </a>
           </div>
         </div>
       </section>
+
 
       {/* The Harsh Reality */}
       <section className="bg-cream py-16 md:py-24">
