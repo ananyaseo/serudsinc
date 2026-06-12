@@ -40,6 +40,7 @@ export function SiteFooter({ showAnanyaCredit = false }: { showAnanyaCredit?: bo
           <div className="text-xs font-semibold uppercase tracking-widest text-gold">Pages</div>
           <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
             <li><Link to="/donate" className="hover:text-gold">Donate to 501(c)3 Nonprofit for India</Link></li>
+            <li><Link to="/donate-elders-india" className="hover:text-gold">Donate To India From USA For Elderly People</Link></li>
             <li><a href="https://www.paypal.com/paypalme/seruds" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Donate Via PayPal</a></li>
             <li><a href="#" className="hover:text-gold">Testimonials</a></li>
             <li><a href="#" className="hover:text-gold">Privacy Policy</a></li>
