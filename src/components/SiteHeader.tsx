@@ -1,7 +1,7 @@
-import { useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { ChevronDown, Phone, Mail } from "lucide-react";
 import logo from "@/assets/seruds/logo.png";
+
 
 const causes = [
   { to: "/old-age-home", label: "Old Age Home" },
