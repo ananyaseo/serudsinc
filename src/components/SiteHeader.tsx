@@ -37,13 +37,14 @@ export function SiteHeader() {
           {/* Home dropdown */}
           <div className="group relative">
             <button
-              type="button"
+            <Link
+              to="/"
               className="inline-flex items-center gap-1 hover:text-gold-deep focus:outline-none"
-              aria-haspopup="true"
             >
               Home
               <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
-            </button>
+            </Link>
+
             <div className="invisible absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
               <div className="overflow-hidden rounded-xl border border-border bg-background shadow-xl ring-1 ring-border/50">
                 <ul className="py-2">
