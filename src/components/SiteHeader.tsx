@@ -36,7 +36,6 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-7 text-sm font-medium text-forest-deep md:flex">
           {/* Home dropdown */}
           <div className="group relative">
-            <button
             <Link
               to="/"
               className="inline-flex items-center gap-1 hover:text-gold-deep focus:outline-none"
