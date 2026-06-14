@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import heroImg from "@/assets/seruds/orphan-group.jpg";
@@ -70,12 +71,7 @@ function AboutPage() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/donate"
-                className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
-              >
-                Donate Now →
-              </Link>
+              <DonorboxPopupButton />
               <Link
                 to="/contact"
                 className="rounded-full border border-primary-foreground/40 px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
@@ -213,9 +209,7 @@ function AboutPage() {
             <a href="mailto:seruds.inc@gmail.com" className="font-semibold text-forest-deep hover:text-gold-deep">seruds.inc@gmail.com</a>
           </address>
           <div className="mt-8">
-            <Link to="/donate" className="inline-flex rounded-full bg-gold px-8 py-4 text-base font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground">
-              Donate Today →
-            </Link>
+            <DonorboxPopupButton />
           </div>
         </div>
       </section>

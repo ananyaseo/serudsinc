@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
@@ -58,12 +59,7 @@ function DonateForChildrenPage() {
               futures for the underprivileged children of India.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/donate"
-                className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
-              >
-                Donate Now →
-              </Link>
+              <DonorboxPopupButton />
               <a
                 href="https://donorbox.org/donation-seruds-inc"
                 target="_blank"
@@ -127,12 +123,7 @@ function DonateForChildrenPage() {
               <li><strong>✓ Illness &amp; High Mortality</strong> — driven by lack of healthcare.</li>
             </ul>
 
-            <Link
-              to="/donate"
-              className="mt-8 inline-flex rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-md hover:bg-gold-deep hover:text-primary-foreground"
-            >
-              Donate Now →
-            </Link>
+            <DonorboxPopupButton />
           </div>
         </div>
       </section>
@@ -222,12 +213,7 @@ function DonateForChildrenPage() {
           </div>
 
           <div className="mt-10 text-center">
-            <Link
-              to="/donate"
-              className="inline-flex rounded-full bg-forest-deep px-8 py-3.5 text-sm font-bold text-primary-foreground shadow-md hover:bg-gold hover:text-forest-deep"
-            >
-              Donate Now →
-            </Link>
+            <DonorboxPopupButton />
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -56,12 +57,7 @@ function DonateEldersIndiaPage() {
               elderly in old age homes and on the streets.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/donate"
-                className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
-              >
-                Donate Now →
-              </Link>
+              <DonorboxPopupButton />
               <a
                 href="https://donorbox.org/donation-seruds-inc"
                 target="_blank"
@@ -184,12 +180,7 @@ function DonateEldersIndiaPage() {
             fully tax-deductible.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link
-              to="/donate"
-              className="rounded-full bg-gold px-8 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
-            >
-              Donate Now →
-            </Link>
+            <DonorboxPopupButton />
             <Link
               to="/old-age-home"
               className="rounded-full border border-primary-foreground/40 px-8 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
