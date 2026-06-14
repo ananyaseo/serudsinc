@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
@@ -49,12 +50,7 @@ function SponsorEducationPage() {
               mentoring. Empower a young life to break the cycle of poverty through education.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/donate"
-                className="rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground"
-              >
-                Donate Now →
-              </Link>
+              <DonorboxPopupButton />
               <a
                 href="https://donorbox.org/donation-seruds-inc"
                 target="_blank"
@@ -124,12 +120,7 @@ function SponsorEducationPage() {
               </li>
             </ul>
 
-            <Link
-              to="/donate"
-              className="mt-8 inline-flex rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-md hover:bg-gold-deep hover:text-primary-foreground"
-            >
-              Donate Now →
-            </Link>
+            <DonorboxPopupButton />
           </div>
         </div>
       </section>
@@ -182,12 +173,7 @@ function SponsorEducationPage() {
                 brighter future for India and the world.
               </li>
             </ul>
-            <Link
-              to="/donate"
-              className="mt-8 inline-flex rounded-full bg-gold px-7 py-3.5 text-sm font-bold text-forest-deep shadow-md hover:bg-gold-deep hover:text-primary-foreground"
-            >
-              Donate Now →
-            </Link>
+            <DonorboxPopupButton />
           </div>
         </div>
       </section>
