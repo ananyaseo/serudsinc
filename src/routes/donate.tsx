@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -52,9 +53,7 @@ function DonatePage() {
               Every day, children go to bed hungry, elderly people are abandoned without care, and families struggle to survive. Your support helps provide food, shelter, education, healthcare, and hope to those who need it most.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a href="#donate-form" className="rounded-full bg-[#F97316] px-7 py-3.5 text-base font-bold text-white shadow-lg hover:bg-[#ea6a0c] transition">
-                Donate Now →
-              </a>
+              <DonorboxPopupButton />
               <span className="self-center text-xs text-white/80">Tax-Deductible • Secure Giving via Donorbox</span>
             </div>
           </div>
@@ -237,16 +236,12 @@ function DonatePage() {
           <p className="mt-4 text-white/90 md:text-lg">
             Your generosity can help transform lives through food, education, shelter, healthcare, and dignity. Join compassionate supporters who are making a lasting difference.
           </p>
-          <a href="#donate-form" className="mt-7 inline-block rounded-full bg-[#F97316] px-8 py-4 text-lg font-bold text-white shadow-xl hover:bg-[#ea6a0c] transition">
-            Donate Today →
-          </a>
+          <DonorboxPopupButton />
         </div>
       </section>
 
       {/* Mobile sticky donate */}
-      <a href="#donate-form" className="lg:hidden fixed bottom-4 inset-x-4 z-40 rounded-full bg-[#F97316] px-6 py-3.5 text-center text-base font-bold text-white shadow-2xl">
-        Donate Now →
-      </a>
+      <DonorboxPopupButton />
 
       <SiteFooter showAnanyaCredit />
     </div>

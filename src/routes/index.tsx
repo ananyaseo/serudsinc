@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import heroImg from "@/assets/seruds/orphan-group.jpg";
 import elderlyImg from "@/assets/seruds/old-age.jpg";
 import orphanImg from "@/assets/seruds/orphan-600.jpg";
@@ -58,9 +59,7 @@ function Hero() {
             We work for the development of poor elderly persons and abandoned orphan children in Kurnool District, Andhra Pradesh, India.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link to="/donate" className="rounded-full bg-gold px-7 py-4 text-base font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground">
-              Donate Now →
-            </Link>
+            <DonorboxPopupButton />
             <a href="#programs" className="rounded-full border border-primary-foreground/40 px-7 py-4 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10">
               Our Programs
             </a>
@@ -180,9 +179,7 @@ function AboutSeruds() {
             <p className="mt-4 text-base leading-relaxed text-primary-foreground/80">
               SERUDS Inc. is a 501(c)(3) Charitable Organization in Land O' Lakes, Florida. SERUDS projects are focused on disadvantaged children (orphanage, sponsoring education, street children), Elderly & Homeless (Old Age Home, sponsoring cooked meals and groceries), and Women Empowerment (livelihood training) in Kurnool, India.
             </p>
-            <Link to="/donate" className="mt-6 inline-flex rounded-full bg-gold px-8 py-4 text-base font-bold text-forest-deep shadow-xl hover:bg-gold-deep hover:text-primary-foreground">
-              Donate Today →
-            </Link>
+            <DonorboxPopupButton />
           </div>
         </div>
       </div>
