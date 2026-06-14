@@ -200,17 +200,7 @@ function DonatePage() {
               <h2 className="font-display text-2xl font-semibold text-[#0F4C81]">Ready to Change a Life?</h2>
               <p className="mt-2 text-sm text-slate-600">Your secure donation can provide food, education, care, and hope.</p>
               <div className="mt-4">
-                {/* @ts-expect-error custom element */}
-                <dbox-widget
-                  campaign="donation-seruds-inc"
-                  type="popup"
-                  button-label="Donate"
-                  button-type="regular"
-                  button-color="#128aed"
-                  button-size="medium"
-                  regular-position="left"
-                  show-icon=""
-                />
+                <DonorboxPopupButton />
               </div>
               <div className="mt-4 flex flex-wrap gap-2 text-xs">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 ring-1 ring-slate-200"><Lock size={14} className="text-[#16A34A]" /> Secure</span>
