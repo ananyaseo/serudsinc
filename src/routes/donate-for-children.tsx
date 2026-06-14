@@ -60,14 +60,7 @@ function DonateForChildrenPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <DonorboxPopupButton />
-              <a
-                href="https://donorbox.org/donation-seruds-inc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-primary-foreground/40 px-7 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                Sponsor a Child
-              </a>
+              <DonorboxPopupButton label="Sponsor a Child" />
             </div>
           </div>
 
