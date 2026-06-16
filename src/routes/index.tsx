@@ -4,7 +4,7 @@ import heroImg from "@/assets/seruds/orphan-group.jpg";
 import elderlyImg from "@/assets/seruds/old-age.jpg";
 import orphanImg from "@/assets/seruds/orphan-600.jpg";
 import eduImg from "@/assets/seruds/sponsor-child.jpg";
-import aboutBgAsset from "@/assets/seruds/ngo-for-elders.jpg.asset.json";
+import aboutBgImg from "@/assets/seruds/ngo-for-elders.jpg";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
@@ -160,7 +160,7 @@ function AboutSeruds() {
   return (
     <section id="about" className="relative overflow-hidden py-14">
       <div className="absolute inset-0">
-        <img src={aboutBgAsset.url} alt="" aria-hidden="true" className="h-full w-full object-cover opacity-70" />
+        <img src={aboutBgImg} alt="" aria-hidden="true" className="h-full w-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-r from-forest-deep/75 via-forest-deep/50 to-forest-deep/10" />
       </div>
       <div className="relative mx-auto max-w-7xl px-6">
