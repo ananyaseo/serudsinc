@@ -3,7 +3,7 @@ import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
-import sponsorGirlsAsset from "@/assets/seruds/sponsor-girls-education.jpg.asset.json";
+import sponsorGirlsImg from "@/assets/seruds/sponsor-girls-education.jpg";
 import aboutImg from "@/assets/seruds/sponsor-child.jpg";
 
 const BHARGAV_IMG =
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/sponsor-education")({
         content:
           "For $200/month you can sponsor a child's full education — schooling, supplies, vocational training and support.",
       },
-      { property: "og:image", content: sponsorGirlsAsset.url },
+      { property: "og:image", content: sponsorGirlsImg },
     ],
   }),
   component: SponsorEducationPage,
@@ -58,7 +58,7 @@ function SponsorEducationPage() {
           <div className="relative">
             <div className="overflow-hidden rounded-[2.5rem] shadow-2xl ring-1 ring-primary-foreground/10">
               <img
-                src={sponsorGirlsAsset.url}
+                src={sponsorGirlsImg}
                 alt="Girl children sponsored by SERUDS receiving school bags and supplies"
                 className="aspect-[4/3] w-full object-cover"
               />

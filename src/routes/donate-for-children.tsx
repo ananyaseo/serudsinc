@@ -3,8 +3,8 @@ import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
-import creche6 from "@/assets/seruds/creche-6.jpg.asset.json";
-import sponsorGirlsAsset from "@/assets/seruds/sponsor-girls-education.jpg.asset.json";
+import creche6 from "@/assets/seruds/creche-6.jpg";
+import sponsorGirlsImg from "@/assets/seruds/sponsor-girls-education.jpg";
 
 const HERO_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/Donate-for-Poor-Children-Education-in-India.jpg";
@@ -14,8 +14,8 @@ const STORY_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/daycare-center-poor-children-800.jpg";
 const ORPHANAGE_IMG =
   "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool.jpg";
-const SPONSOR_EDU_IMG = sponsorGirlsAsset.url;
-const DAYCARE_IMG = creche6.url;
+const SPONSOR_EDU_IMG = sponsorGirlsImg;
+const DAYCARE_IMG = creche6;
 
 export const Route = createFileRoute("/donate-for-children")({
   head: () => ({

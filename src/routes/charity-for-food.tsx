@@ -3,10 +3,10 @@ import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
-import heroBannerAsset from "@/assets/seruds/midday-meals-elders-banner.jpg.asset.json";
+import heroBannerImg from "@/assets/seruds/midday-meals-elders-banner.jpg";
 
-const HERO_IMG = heroBannerAsset.url;
-const ABOUT_IMG = heroBannerAsset.url;
+const HERO_IMG = heroBannerImg;
+const ABOUT_IMG = heroBannerImg;
 const STORY_IMG =
   "https://serudsinc.org/wp-content/uploads/2024/01/old-age-woman-600-min.jpg";
 
