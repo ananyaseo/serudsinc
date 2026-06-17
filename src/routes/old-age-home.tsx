@@ -4,7 +4,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import HERO_IMG from "@/assets/seruds/old-age-hero.jpg";
-import ABOUT_IMG from "@/assets/seruds/old-age-beacon.jpg";
 import ELDER_IMG from "@/assets/seruds/old-age-elder.jpg";
 
 export const Route = createFileRoute("/old-age-home")({
@@ -80,11 +79,15 @@ function OldAgeHomePage() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] shadow-xl ring-1 ring-border">
-              <img
-                src={ABOUT_IMG}
-                alt="Elders cared for at SERUDS Old Age Home, Kurnool"
-                className="aspect-square w-full object-cover"
-              />
+              <div className="aspect-square w-full">
+                <iframe
+                  src="https://www.youtube.com/embed/rdnE_Lawyvw"
+                  title="SERUDS Old Age Home"
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </div>
           <div>
