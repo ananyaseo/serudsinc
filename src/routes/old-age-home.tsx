@@ -3,13 +3,9 @@ import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
-
-const HERO_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/donate-food-old-age-people.jpg";
-const ABOUT_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/Donate-to-Charity-for-Old-Age-People-in-Kurnool.jpg";
-const ELDER_IMG =
-  "https://serudsinc.org/wp-content/uploads/2024/01/old-age-woman-600-min.jpg";
+import HERO_IMG from "@/assets/seruds/old-age-hero.jpg";
+import ABOUT_IMG from "@/assets/seruds/old-age-beacon.jpg";
+import ELDER_IMG from "@/assets/seruds/old-age-elder.jpg";
 
 export const Route = createFileRoute("/old-age-home")({
   head: () => ({
