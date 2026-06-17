@@ -4,11 +4,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import heroBannerImg from "@/assets/seruds/midday-meals-elders-banner.jpg";
+import storyImg from "@/assets/seruds/charity-food-elder.jpg";
 
 const HERO_IMG = heroBannerImg;
 const ABOUT_IMG = heroBannerImg;
-const STORY_IMG =
-  "https://serudsinc.org/wp-content/uploads/2024/01/old-age-woman-600-min.jpg";
+const STORY_IMG = storyImg;
 
 export const Route = createFileRoute("/charity-for-food")({
   head: () => ({

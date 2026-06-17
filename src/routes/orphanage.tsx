@@ -3,10 +3,9 @@ import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
-
-const HERO_IMG = "https://serudsinc.org/wp-content/uploads/2023/12/Orphan-Group-600-min.jpg";
-const ABOUT_IMG = "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool-1024x576.jpg";
-const CHANDRAKALA_IMG = "https://serudsinc.org/wp-content/uploads/2023/12/Chandrakala-rotated.jpg";
+import HERO_IMG from "@/assets/seruds/orphan-group.jpg";
+import ABOUT_IMG from "@/assets/seruds/orphanage-kurnool.jpg";
+import CHANDRAKALA_IMG from "@/assets/seruds/chandrakala.jpg";
 
 export const Route = createFileRoute("/orphanage")({
   head: () => ({

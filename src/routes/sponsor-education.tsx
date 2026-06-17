@@ -5,9 +5,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import sponsorGirlsImg from "@/assets/seruds/sponsor-girls-education.jpg";
 import aboutImg from "@/assets/seruds/sponsor-child.jpg";
+import BHARGAV_IMG from "@/assets/seruds/bhargav.jpg";
 
-const BHARGAV_IMG =
-  "https://serudsindia.org/wp-content/uploads/2020/12/Sponsor-Education-MG-Bhargava-300.jpg";
 
 export const Route = createFileRoute("/sponsor-education")({
   head: () => ({

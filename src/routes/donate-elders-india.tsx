@@ -2,9 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import HERO_IMG from "@/assets/seruds/donate-elders-food.jpg";
 
-const HERO_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/donate-food-old-age-people.jpg";
 
 export const Route = createFileRoute("/donate-elders-india")({
   head: () => ({

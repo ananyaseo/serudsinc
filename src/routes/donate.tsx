@@ -8,8 +8,7 @@ import teleguManeesha from "@/assets/seruds/telegu-maneesha.jpg";
 import meghanaD from "@/assets/seruds/meghana-d.jpg";
 import ajayGoud from "@/assets/seruds/ajay-goud.jpg";
 import kummariLakshmamma from "@/assets/seruds/kummari-lakshmamma.jpg";
-
-const ORPHAN_GROUP_IMG = "https://serudsinc.org/wp-content/uploads/2023/12/Orphan-Group-600-min.jpg";
+import ORPHAN_GROUP_IMG from "@/assets/seruds/orphan-group.jpg";
 const HERO_BENEFICIARY_IMGS = [
   { src: teleguManeesha, alt: "Telegu Maneesha" },
   { src: meghanaD, alt: "Meghana" },
