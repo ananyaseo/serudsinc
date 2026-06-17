@@ -121,7 +121,9 @@ function ContactPage() {
           )}
         </form>
       </section>
+      <SiteFooter />
     </main>
+
   );
 }
 
