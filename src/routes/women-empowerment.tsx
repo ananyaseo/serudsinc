@@ -3,13 +3,9 @@ import { DonorboxPopupButton } from "@/components/DonorboxPopupButton";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
-
-const HERO_IMG =
-  "https://serudsindia.org/wp-content/uploads/2019/10/Girl-Child-Education-Sponsorship-in-India-for-their-Career-1-1024x576.jpg";
-const ABOUT_IMG =
-  "https://serudsindia.org/wp-content/uploads/2022/03/Vocational-Tailoring-and-Sewing-Training-for-Poor-Women-min.jpg";
-const STORY_IMG =
-  "https://serudsindia.org/wp-content/uploads/2022/03/Skill-Development-Training-for-Women-Empowerment-min.jpg";
+import HERO_IMG from "@/assets/seruds/women-girl-education.jpg";
+import ABOUT_IMG from "@/assets/seruds/women-tailoring.jpg";
+import STORY_IMG from "@/assets/seruds/women-skill.jpg";
 
 export const Route = createFileRoute("/women-empowerment")({
   head: () => ({
