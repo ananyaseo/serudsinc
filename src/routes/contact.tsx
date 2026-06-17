@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import orphanImg from "@/assets/seruds/orphan-group.jpg";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,7 +32,9 @@ function ContactPage() {
 
   return (
     <main className="bg-background">
+      <SiteHeader />
       <section className="bg-forest-deep text-primary-foreground">
+
         <div className="mx-auto max-w-5xl px-6 py-16 text-center">
           <div className="text-xs font-semibold uppercase tracking-widest text-gold">SERUDS Inc</div>
           <h1 className="mt-3 font-display text-4xl font-semibold sm:text-5xl">
@@ -117,7 +121,9 @@ function ContactPage() {
           )}
         </form>
       </section>
+      <SiteFooter />
     </main>
+
   );
 }
 

@@ -5,15 +5,10 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { DonorboxEmbed } from "@/components/DonorboxEmbed";
 import creche6 from "@/assets/seruds/creche-6.jpg";
 import sponsorGirlsImg from "@/assets/seruds/sponsor-girls-education.jpg";
-
-const HERO_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/Donate-for-Poor-Children-Education-in-India.jpg";
-const ABOUT_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool.jpg";
-const STORY_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/daycare-center-poor-children-800.jpg";
-const ORPHANAGE_IMG =
-  "https://serudsinc.org/wp-content/uploads/2023/12/children-in-seruds-orphanage-kurnool.jpg";
+import HERO_IMG from "@/assets/seruds/children-hero.jpg";
+import ABOUT_IMG from "@/assets/seruds/children-orphanage.jpg";
+import STORY_IMG from "@/assets/seruds/children-daycare-story.jpg";
+import ORPHANAGE_IMG from "@/assets/seruds/children-orphanage.jpg";
 const SPONSOR_EDU_IMG = sponsorGirlsImg;
 const DAYCARE_IMG = creche6;
 
